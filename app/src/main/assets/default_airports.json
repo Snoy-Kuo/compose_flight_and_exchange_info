@@ -1,0 +1,3246 @@
+{
+  "lastUpdated": "2025-07-28T23:27:00+08:00",
+  "list": [
+    {
+      "AirportID": "AAN",
+      "AirportName": {
+        "Zh_tw": "艾因國際機場",
+        "En": "AL AIN"
+      }
+    },
+    {
+      "AirportID": "ADJ",
+      "AirportName": {
+        "Zh_tw": "安曼",
+        "En": "Amman"
+      }
+    },
+    {
+      "AirportID": "AKJ",
+      "AirportName": {
+        "Zh_tw": "旭川機場",
+        "En": "Asahikawa"
+      }
+    },
+    {
+      "AirportID": "AKL",
+      "AirportName": {
+        "Zh_tw": "奧克蘭國際機場",
+        "En": "Auckland Airport"
+      }
+    },
+    {
+      "AirportID": "AKN",
+      "AirportName": {
+        "Zh_tw": "金賽蒙",
+        "En": "KING SALMON"
+      }
+    },
+    {
+      "AirportID": "ALA",
+      "AirportName": {
+        "Zh_tw": "阿拉木圖國際機場",
+        "En": "Almaty"
+      }
+    },
+    {
+      "AirportID": "AMD",
+      "AirportName": {
+        "Zh_tw": "薩達爾瓦拉巴伊帕特爾國際機場",
+        "En": "AHMEDABAD"
+      }
+    },
+    {
+      "AirportID": "AMM",
+      "AirportName": {
+        "Zh_tw": "阿麗亞王后國際機場",
+        "En": "Queen Alia International Airport"
+      }
+    },
+    {
+      "AirportID": "AMS",
+      "AirportName": {
+        "Zh_tw": "阿姆斯特丹史基浦機場",
+        "En": "Amsterdam"
+      }
+    },
+    {
+      "AirportID": "ANC",
+      "AirportName": {
+        "Zh_tw": "安克拉治國際機場",
+        "En": "Ted Stevens Airport"
+      }
+    },
+    {
+      "AirportID": "AOJ",
+      "AirportName": {
+        "Zh_tw": "青森機場",
+        "En": "Aomori /"
+      }
+    },
+    {
+      "AirportID": "ARN",
+      "AirportName": {
+        "Zh_tw": "斯德哥爾摩阿蘭達機場",
+        "En": "Arlanda Intl Airport"
+      }
+    },
+    {
+      "AirportID": "ASB",
+      "AirportName": {
+        "Zh_tw": "阿什哈巴德",
+        "En": "Ashgabat Airport"
+      }
+    },
+    {
+      "AirportID": "ASY",
+      "AirportName": {
+        "Zh_tw": "阿什利市",
+        "En": "Ashley Municipal Airport"
+      }
+    },
+    {
+      "AirportID": "ATH",
+      "AirportName": {
+        "Zh_tw": "雅典國際機場",
+        "En": "Athens International Airport"
+      }
+    },
+    {
+      "AirportID": "ATL",
+      "AirportName": {
+        "Zh_tw": "亞特蘭大國際機場",
+        "En": "Atlanta Into Airport"
+      }
+    },
+    {
+      "AirportID": "AUH",
+      "AirportName": {
+        "Zh_tw": "阿布達比國際機場",
+        "En": "ABU DHABI"
+      }
+    },
+    {
+      "AirportID": "AXT",
+      "AirportName": {
+        "Zh_tw": "秋田機場",
+        "En": "Akita"
+      }
+    },
+    {
+      "AirportID": "AZA",
+      "AirportName": {
+        "Zh_tw": "PHOENIX",
+        "En": "Phoenix-Mesa Gateway Airport"
+      }
+    },
+    {
+      "AirportID": "AZI",
+      "AirportName": {
+        "Zh_tw": "阿不達比",
+        "En": "Abu Dhabi"
+      }
+    },
+    {
+      "AirportID": "BAH",
+      "AirportName": {
+        "Zh_tw": "巴林國際機場",
+        "En": "Bahrain"
+      }
+    },
+    {
+      "AirportID": "BDL",
+      "AirportName": {
+        "Zh_tw": "布拉德利",
+        "En": "Bradley"
+      }
+    },
+    {
+      "AirportID": "BEY",
+      "AirportName": {
+        "Zh_tw": "貝魯特國際機場",
+        "En": "Beirut"
+      }
+    },
+    {
+      "AirportID": "BFI",
+      "AirportName": {
+        "Zh_tw": "西雅圖波音",
+        "En": "SEATTLE BOEING"
+      }
+    },
+    {
+      "AirportID": "BHX",
+      "AirportName": {
+        "Zh_tw": "伯明罕國際機場",
+        "En": "Birmingham Intl Airport"
+      }
+    },
+    {
+      "AirportID": "BIK",
+      "AirportName": {
+        "Zh_tw": "WABB",
+        "En": "Frans Kaisiepo Airport"
+      }
+    },
+    {
+      "AirportID": "BJL",
+      "AirportName": {
+        "Zh_tw": "班珠爾國際機場",
+        "En": "Banjul International Airport"
+      }
+    },
+    {
+      "AirportID": "BKI",
+      "AirportName": {
+        "Zh_tw": "亞庇國際機場",
+        "En": "Kota"
+      }
+    },
+    {
+      "AirportID": "BKK",
+      "AirportName": {
+        "Zh_tw": "蘇萬那普國際機場",
+        "En": "Bangkok Intl Airport"
+      }
+    },
+    {
+      "AirportID": "BLI",
+      "AirportName": {
+        "Zh_tw": "貝林漢",
+        "En": "Bellingham"
+      }
+    },
+    {
+      "AirportID": "BLR",
+      "AirportName": {
+        "Zh_tw": "邦加羅爾國際機場",
+        "En": "Bangalore"
+      }
+    },
+    {
+      "AirportID": "BNE",
+      "AirportName": {
+        "Zh_tw": "布里斯本國際機場",
+        "En": "Brisbane Airport"
+      }
+    },
+    {
+      "AirportID": "BOB",
+      "AirportName": {
+        "En": "Motu Mute"
+      }
+    },
+    {
+      "AirportID": "BOM",
+      "AirportName": {
+        "Zh_tw": "孟買國際機場",
+        "En": "Mumbai Intl Airport"
+      }
+    },
+    {
+      "AirportID": "BOS",
+      "AirportName": {
+        "Zh_tw": "波士頓洛根國際機場",
+        "En": "Boston Logan Intl Airport"
+      }
+    },
+    {
+      "AirportID": "BPM",
+      "AirportName": {
+        "Zh_tw": "海德拉巴",
+        "En": "Hyderabad"
+      }
+    },
+    {
+      "AirportID": "BRQ",
+      "AirportName": {
+        "Zh_tw": "布林諾Tu?any機場",
+        "En": "Brno-Tu?any Airport"
+      }
+    },
+    {
+      "AirportID": "BRU",
+      "AirportName": {
+        "Zh_tw": "布魯塞爾機場",
+        "En": "Brussels Airport"
+      }
+    },
+    {
+      "AirportID": "BTH",
+      "AirportName": {
+        "Zh_tw": "Batam",
+        "En": "Hang Nadim Airport"
+      }
+    },
+    {
+      "AirportID": "BUD",
+      "AirportName": {
+        "Zh_tw": "布達佩斯國際機場",
+        "En": "Budapest Airport"
+      }
+    },
+    {
+      "AirportID": "BWI",
+      "AirportName": {
+        "Zh_tw": "巴爾的摩馬歇爾國際機場",
+        "En": "Thurgood Marshall Airport"
+      }
+    },
+    {
+      "AirportID": "BWN",
+      "AirportName": {
+        "Zh_tw": "汶萊國際機場",
+        "En": "Brunei"
+      }
+    },
+    {
+      "AirportID": "CAH",
+      "AirportName": {
+        "Zh_tw": "大叻市",
+        "En": "Dalat"
+      }
+    },
+    {
+      "AirportID": "CAI",
+      "AirportName": {
+        "Zh_tw": "開羅國際機場",
+        "En": "Cairo Intl Airport"
+      }
+    },
+    {
+      "AirportID": "CAN",
+      "AirportName": {
+        "Zh_tw": "廣州白雲國際機場",
+        "En": "Guangzhou Baiyun Airport"
+      }
+    },
+    {
+      "AirportID": "CBO",
+      "AirportName": {
+        "Zh_tw": "宿霧",
+        "En": "Awang"
+      }
+    },
+    {
+      "AirportID": "CBR",
+      "AirportName": {
+        "Zh_tw": "坎培拉國際機場",
+        "En": "Canberra Intl Airport"
+      }
+    },
+    {
+      "AirportID": "CCS",
+      "AirportName": {
+        "Zh_tw": "加拉加斯國際機場",
+        "En": "Simon Bolivar Intl Airport"
+      }
+    },
+    {
+      "AirportID": "CCU",
+      "AirportName": {
+        "Zh_tw": "加爾各答國際機場",
+        "En": "KOLKATA"
+      }
+    },
+    {
+      "AirportID": "CDB",
+      "AirportName": {
+        "Zh_tw": "冷灣",
+        "En": "COLD BAY"
+      }
+    },
+    {
+      "AirportID": "CDG",
+      "AirportName": {
+        "Zh_tw": "巴黎戴高樂機場",
+        "En": "Paris-Charles Airport"
+      }
+    },
+    {
+      "AirportID": "CEB",
+      "AirportName": {
+        "Zh_tw": "宿霧國際機場",
+        "En": "Cebu"
+      }
+    },
+    {
+      "AirportID": "CEI",
+      "AirportName": {
+        "Zh_tw": "清萊國際機場",
+        "En": "Chiang Rai"
+      }
+    },
+    {
+      "AirportID": "CGK",
+      "AirportName": {
+        "Zh_tw": "雅加達國際機場",
+        "En": "Soekarno-Hatta Airport"
+      }
+    },
+    {
+      "AirportID": "CGN",
+      "AirportName": {
+        "Zh_tw": "科隆機場",
+        "En": "KOLN/BONN"
+      }
+    },
+    {
+      "AirportID": "CGO",
+      "AirportName": {
+        "Zh_tw": "鄭州新鄭國際機場",
+        "En": "Xinzheng Airport"
+      }
+    },
+    {
+      "AirportID": "CGQ",
+      "AirportName": {
+        "Zh_tw": "長春龍嘉國際機場",
+        "En": "Changchun Longjia Airport"
+      }
+    },
+    {
+      "AirportID": "CHC",
+      "AirportName": {
+        "Zh_tw": "基督城國際機場",
+        "En": "CHRISTCHURCH"
+      }
+    },
+    {
+      "AirportID": "CIA",
+      "AirportName": {
+        "Zh_tw": "羅馬錢皮諾機場",
+        "En": "ROMA/CIAMPINO"
+      }
+    },
+    {
+      "AirportID": "CJJ",
+      "AirportName": {}
+    },
+    {
+      "AirportID": "CJU",
+      "AirportName": {
+        "Zh_tw": "濟州國際機場",
+        "En": "JEJU"
+      }
+    },
+    {
+      "AirportID": "CKG",
+      "AirportName": {
+        "Zh_tw": "重慶江北國際機場",
+        "En": "Chongqing Jiangbei Airport"
+      }
+    },
+    {
+      "AirportID": "CLD",
+      "AirportName": {
+        "Zh_tw": "卡爾斯巴德",
+        "En": "Carlsbad"
+      }
+    },
+    {
+      "AirportID": "CLE",
+      "AirportName": {
+        "Zh_tw": "克里夫蘭霍普金斯國際機場",
+        "En": "Cleveland Hopkins Airport"
+      }
+    },
+    {
+      "AirportID": "CMB",
+      "AirportName": {
+        "Zh_tw": "可倫坡班達拉奈克國際機場",
+        "En": "Colombo"
+      }
+    },
+    {
+      "AirportID": "CMJ",
+      "AirportName": {
+        "Zh_tw": "七美機場",
+        "En": "Qimei Airport"
+      }
+    },
+    {
+      "AirportID": "CNS",
+      "AirportName": {
+        "Zh_tw": "凱恩斯機場",
+        "En": "Cairns"
+      }
+    },
+    {
+      "AirportID": "CNX",
+      "AirportName": {
+        "Zh_tw": "清邁國際機場",
+        "En": "Chiang Mai"
+      }
+    },
+    {
+      "AirportID": "COK",
+      "AirportName": {
+        "Zh_tw": "科欽國際機場",
+        "En": "Cochin"
+      }
+    },
+    {
+      "AirportID": "CPH",
+      "AirportName": {
+        "Zh_tw": "哥本哈根機場",
+        "En": "Copenhagen Airport"
+      }
+    },
+    {
+      "AirportID": "CPT",
+      "AirportName": {
+        "Zh_tw": "開普敦國際機場",
+        "En": "Cape Town Intl Airport"
+      }
+    },
+    {
+      "AirportID": "CRK",
+      "AirportName": {
+        "Zh_tw": "克拉克",
+        "En": "CLARK"
+      }
+    },
+    {
+      "AirportID": "CSX",
+      "AirportName": {
+        "Zh_tw": "長沙黃花國際機場",
+        "En": "Huanghua Airport"
+      }
+    },
+    {
+      "AirportID": "CTS",
+      "AirportName": {
+        "Zh_tw": "新千歲機場",
+        "En": "Shin-Chitose Airport"
+      }
+    },
+    {
+      "AirportID": "CTU",
+      "AirportName": {
+        "Zh_tw": "成都雙流國際機場",
+        "En": "Chengdu Shuangliu Airport"
+      }
+    },
+    {
+      "AirportID": "CXR",
+      "AirportName": {
+        "Zh_tw": "芽莊金蘭機場",
+        "En": "Cam Ranh International Airport"
+      }
+    },
+    {
+      "AirportID": "CYI",
+      "AirportName": {
+        "Zh_tw": "嘉義機場",
+        "En": "Chaiyi Airport"
+      }
+    },
+    {
+      "AirportID": "CZX",
+      "AirportName": {
+        "Zh_tw": "常州奔牛國際機場",
+        "En": "Changzhou"
+      }
+    },
+    {
+      "AirportID": "DAC",
+      "AirportName": {
+        "Zh_tw": "達卡國際機場",
+        "En": "Dhaka"
+      }
+    },
+    {
+      "AirportID": "DAD",
+      "AirportName": {
+        "Zh_tw": "峴港國際機場",
+        "En": "Da Nang"
+      }
+    },
+    {
+      "AirportID": "DAY",
+      "AirportName": {
+        "Zh_tw": "代頓國際機場",
+        "En": "Dayton"
+      }
+    },
+    {
+      "AirportID": "DCA",
+      "AirportName": {
+        "Zh_tw": "雷根華盛頓國際機場",
+        "En": "Ronald Reagan Airport"
+      }
+    },
+    {
+      "AirportID": "DEL",
+      "AirportName": {
+        "Zh_tw": "新德里英迪拉甘地國際機場",
+        "En": "Indira Grandhi Intl Airport"
+      }
+    },
+    {
+      "AirportID": "DEN",
+      "AirportName": {
+        "Zh_tw": "丹佛國際機場",
+        "En": "Denver Intl Airport"
+      }
+    },
+    {
+      "AirportID": "DFW",
+      "AirportName": {
+        "Zh_tw": "達拉斯沃斯堡國際機場",
+        "En": "Fort Worth Intl Airport"
+      }
+    },
+    {
+      "AirportID": "DHA",
+      "AirportName": {
+        "Zh_tw": "達蘭",
+        "En": "Dhahran"
+      }
+    },
+    {
+      "AirportID": "DLC",
+      "AirportName": {
+        "Zh_tw": "大連周水子國際機場",
+        "En": "Dalian Zhoushuizi Airport"
+      }
+    },
+    {
+      "AirportID": "DME",
+      "AirportName": {
+        "Zh_tw": "莫斯科多莫傑多沃國際機場",
+        "En": "Moscow Dme"
+      }
+    },
+    {
+      "AirportID": "DMK",
+      "AirportName": {
+        "Zh_tw": "廊曼國際機場",
+        "En": "Don Mueang Intl Airport"
+      }
+    },
+    {
+      "AirportID": "DMM",
+      "AirportName": {
+        "Zh_tw": "法赫德國王國際機場",
+        "En": "Dammam"
+      }
+    },
+    {
+      "AirportID": "DNA",
+      "AirportName": {
+        "Zh_tw": "嘉手納",
+        "En": "KADENA"
+      }
+    },
+    {
+      "AirportID": "DOV",
+      "AirportName": {
+        "Zh_tw": "DOVER",
+        "En": "Dover Air Force Base"
+      }
+    },
+    {
+      "AirportID": "DPS",
+      "AirportName": {
+        "Zh_tw": "峇里島國際機場",
+        "En": "Ngurah Rai"
+      }
+    },
+    {
+      "AirportID": "DRS",
+      "AirportName": {
+        "Zh_tw": "德勒斯登機場",
+        "En": "Dresden"
+      }
+    },
+    {
+      "AirportID": "DRW",
+      "AirportName": {
+        "Zh_tw": "達爾文國際機場",
+        "En": "DARWIN"
+      }
+    },
+    {
+      "AirportID": "DSX",
+      "AirportName": {
+        "Zh_tw": "東沙",
+        "En": "Pratas Islands"
+      }
+    },
+    {
+      "AirportID": "DTW",
+      "AirportName": {
+        "Zh_tw": "底特律都會韋恩縣機場",
+        "En": "Metropolitan County Airport"
+      }
+    },
+    {
+      "AirportID": "DUB",
+      "AirportName": {
+        "Zh_tw": "都柏林機場",
+        "En": "Dublin Airport"
+      }
+    },
+    {
+      "AirportID": "DUS",
+      "AirportName": {
+        "Zh_tw": "杜塞道夫國際機場",
+        "En": "Dusseldorf Intl Airport"
+      }
+    },
+    {
+      "AirportID": "DVO",
+      "AirportName": {
+        "Zh_tw": "達沃機場",
+        "En": "OSA"
+      }
+    },
+    {
+      "AirportID": "DWC",
+      "AirportName": {
+        "Zh_tw": "杜拜DWC",
+        "En": "Al Maktoum International Airport"
+      }
+    },
+    {
+      "AirportID": "DXB",
+      "AirportName": {
+        "Zh_tw": "杜拜國際機場",
+        "En": "DUBAI"
+      }
+    },
+    {
+      "AirportID": "DYG",
+      "AirportName": {
+        "Zh_tw": "張家界荷花國際機場",
+        "En": "Zhangjiajie Hehua Airport"
+      }
+    },
+    {
+      "AirportID": "EDF",
+      "AirportName": {
+        "Zh_tw": "安克拉治空軍基地",
+        "En": "ELMENDORF AFB."
+      }
+    },
+    {
+      "AirportID": "EIL",
+      "AirportName": {
+        "Zh_tw": "愛爾森空軍基地 費爾班克斯",
+        "En": "EIELSON AFB."
+      }
+    },
+    {
+      "AirportID": "ENA",
+      "AirportName": {
+        "Zh_tw": "科內",
+        "En": "KENAI/MUNI"
+      }
+    },
+    {
+      "AirportID": "EWR",
+      "AirportName": {
+        "Zh_tw": "紐約紐華克機",
+        "En": "New Jersey"
+      }
+    },
+    {
+      "AirportID": "EZE",
+      "AirportName": {
+        "Zh_tw": "布宜諾斯艾利斯機場",
+        "En": "Buenos Aires Airport"
+      }
+    },
+    {
+      "AirportID": "FAE",
+      "AirportName": {
+        "Zh_tw": "法羅群島機場",
+        "En": "Faroe Islands Airport"
+      }
+    },
+    {
+      "AirportID": "FAI",
+      "AirportName": {
+        "Zh_tw": "費爾班克斯",
+        "En": "FAIRBANKS"
+      }
+    },
+    {
+      "AirportID": "FCO",
+      "AirportName": {
+        "Zh_tw": "羅馬法林明高機場",
+        "En": "Rome / Fiumicino"
+      }
+    },
+    {
+      "AirportID": "FJR",
+      "AirportName": {
+        "Zh_tw": "富查伊拉國際機場",
+        "En": "United Arab Emirates"
+      }
+    },
+    {
+      "AirportID": "FKS",
+      "AirportName": {
+        "En": "Fukushima / Fukushima Airport"
+      }
+    },
+    {
+      "AirportID": "FLR",
+      "AirportName": {
+        "Zh_tw": "佛羅倫斯機場",
+        "En": "Florence Intl Airport"
+      }
+    },
+    {
+      "AirportID": "FNJ",
+      "AirportName": {
+        "Zh_tw": "平壤順安國際機場",
+        "En": "PYONGYANG"
+      }
+    },
+    {
+      "AirportID": "FOC",
+      "AirportName": {
+        "Zh_tw": "福州長樂機場",
+        "En": "Fuzhou Changle Airport"
+      }
+    },
+    {
+      "AirportID": "FRA",
+      "AirportName": {
+        "Zh_tw": "法蘭克福國際機場",
+        "En": "Frankfurt-Main Airport"
+      }
+    },
+    {
+      "AirportID": "FRU",
+      "AirportName": {
+        "Zh_tw": "MANAS AIRPORT",
+        "En": "Manas Airport"
+      }
+    },
+    {
+      "AirportID": "FSZ",
+      "AirportName": {
+        "Zh_tw": "靜岡",
+        "En": "Shizuoka"
+      }
+    },
+    {
+      "AirportID": "FUK",
+      "AirportName": {
+        "Zh_tw": "福岡機場",
+        "En": "Fukuoka"
+      }
+    },
+    {
+      "AirportID": "FZO",
+      "AirportName": {
+        "En": "Bristol Filton Airport"
+      }
+    },
+    {
+      "AirportID": "GAJ",
+      "AirportName": {
+        "Zh_tw": "山形",
+        "En": "Yamagata"
+      }
+    },
+    {
+      "AirportID": "GDX",
+      "AirportName": {
+        "Zh_tw": "索科爾機場",
+        "En": "Sokol Airport"
+      }
+    },
+    {
+      "AirportID": "GES",
+      "AirportName": {
+        "Zh_tw": "TANBLER",
+        "En": "Tanbler"
+      }
+    },
+    {
+      "AirportID": "GGE",
+      "AirportName": {
+        "Zh_tw": "喬治城",
+        "En": "Georgetown"
+      }
+    },
+    {
+      "AirportID": "GMP",
+      "AirportName": {
+        "Zh_tw": "首爾金浦國際機場",
+        "En": "Seoul-Gimpo Intl Airport"
+      }
+    },
+    {
+      "AirportID": "GNI",
+      "AirportName": {
+        "Zh_tw": "綠島機場",
+        "En": "Lyudao Airport"
+      }
+    },
+    {
+      "AirportID": "GOH",
+      "AirportName": {
+        "Zh_tw": "努克機場",
+        "En": "Nuuk Airport"
+      }
+    },
+    {
+      "AirportID": "GRU",
+      "AirportName": {
+        "Zh_tw": "聖保羅瓜魯柳斯國際機場",
+        "En": "Guarulhos Airport"
+      }
+    },
+    {
+      "AirportID": "GRZ",
+      "AirportName": {
+        "Zh_tw": "格拉茲機場",
+        "En": "Graz Airport"
+      }
+    },
+    {
+      "AirportID": "GUM",
+      "AirportName": {
+        "Zh_tw": "關島國際機場",
+        "En": "GUAM INTL"
+      }
+    },
+    {
+      "AirportID": "GVA",
+      "AirportName": {
+        "Zh_tw": "日內瓦機場",
+        "En": "Geneva Intl Airport"
+      }
+    },
+    {
+      "AirportID": "GYD",
+      "AirportName": {
+        "Zh_tw": "蓋達爾阿利耶夫國際機場",
+        "En": "Baku"
+      }
+    },
+    {
+      "AirportID": "HAK",
+      "AirportName": {
+        "Zh_tw": "海口美蘭國際機場",
+        "En": "Meilan"
+      }
+    },
+    {
+      "AirportID": "HAM",
+      "AirportName": {
+        "Zh_tw": "漢堡機場",
+        "En": "Hamburg Airport"
+      }
+    },
+    {
+      "AirportID": "HAN",
+      "AirportName": {
+        "Zh_tw": "河內內排國際機場",
+        "En": "Noi Bai Intl Airport"
+      }
+    },
+    {
+      "AirportID": "HCN",
+      "AirportName": {
+        "Zh_tw": "恆春機場",
+        "En": "Hengchun Airport"
+      }
+    },
+    {
+      "AirportID": "HDY",
+      "AirportName": {
+        "Zh_tw": "合艾國際機場",
+        "En": "Hat Yai"
+      }
+    },
+    {
+      "AirportID": "HEL",
+      "AirportName": {
+        "Zh_tw": "赫爾辛基萬塔國際機場",
+        "En": "Helsinki Airport"
+      }
+    },
+    {
+      "AirportID": "HET",
+      "AirportName": {
+        "Zh_tw": "呼和浩特白塔國際機場",
+        "En": "Huhehaote Baita Airport"
+      }
+    },
+    {
+      "AirportID": "HFE",
+      "AirportName": {
+        "Zh_tw": "合肥駱崗國際機場",
+        "En": "Hefei"
+      }
+    },
+    {
+      "AirportID": "HGH",
+      "AirportName": {
+        "Zh_tw": "杭州蕭山國際機場",
+        "En": "Hangzhou Xiaoshan Airport"
+      }
+    },
+    {
+      "AirportID": "HHN",
+      "AirportName": {
+        "Zh_tw": "Hahn Germany",
+        "En": "Frankfurt hahn Airport"
+      }
+    },
+    {
+      "AirportID": "HHQ",
+      "AirportName": {
+        "Zh_tw": "華欣",
+        "En": "Hua Hin"
+      }
+    },
+    {
+      "AirportID": "HIA",
+      "AirportName": {
+        "Zh_tw": "淮安漣水機場",
+        "En": "Huaian"
+      }
+    },
+    {
+      "AirportID": "HIJ",
+      "AirportName": {
+        "Zh_tw": "廣島機場",
+        "En": "Hiroshima"
+      }
+    },
+    {
+      "AirportID": "HIO",
+      "AirportName": {
+        "Zh_tw": "波特蘭(1)",
+        "En": "Portland"
+      }
+    },
+    {
+      "AirportID": "HIR",
+      "AirportName": {
+        "Zh_tw": "霍尼亞拉國際機場",
+        "En": "Honiara Solomon I."
+      }
+    },
+    {
+      "AirportID": "HIW",
+      "AirportName": {
+        "Zh_tw": "廣島西",
+        "En": "Hiroshima-Nishi"
+      }
+    },
+    {
+      "AirportID": "HKD",
+      "AirportName": {
+        "Zh_tw": "函館機場",
+        "En": "HAKODATE"
+      }
+    },
+    {
+      "AirportID": "HKG",
+      "AirportName": {
+        "Zh_tw": "香港國際機場",
+        "En": "Hong Kong Intl Airport"
+      }
+    },
+    {
+      "AirportID": "HKT",
+      "AirportName": {
+        "Zh_tw": "普吉國際機場",
+        "En": "Phuket intl Airport"
+      }
+    },
+    {
+      "AirportID": "HLD",
+      "AirportName": {
+        "Zh_tw": "呼倫貝爾海拉爾機場",
+        "En": "Hulunbuir Hailar Airport"
+      }
+    },
+    {
+      "AirportID": "HLP",
+      "AirportName": {
+        "Zh_tw": "雅加達 哈姆",
+        "En": "JAKARTA HALIM"
+      }
+    },
+    {
+      "AirportID": "HNA",
+      "AirportName": {
+        "Zh_tw": "花卷機場",
+        "En": "Hanamaki"
+      }
+    },
+    {
+      "AirportID": "HND",
+      "AirportName": {
+        "Zh_tw": "東京羽田機場",
+        "En": "Tokyo-Haneda Airport"
+      }
+    },
+    {
+      "AirportID": "HNL",
+      "AirportName": {
+        "Zh_tw": "檀香山國際機場",
+        "En": "Honolulu"
+      }
+    },
+    {
+      "AirportID": "HRB",
+      "AirportName": {
+        "Zh_tw": "哈爾濱太平國際機場",
+        "En": "Harbin"
+      }
+    },
+    {
+      "AirportID": "HSG",
+      "AirportName": {
+        "Zh_tw": "佐賀",
+        "En": "SAGA"
+      }
+    },
+    {
+      "AirportID": "HTA",
+      "AirportName": {
+        "Zh_tw": "赤塔",
+        "En": "Chita"
+      }
+    },
+    {
+      "AirportID": "HUH",
+      "AirportName": {
+        "Zh_tw": "胡阿希內島",
+        "En": "Huahine"
+      }
+    },
+    {
+      "AirportID": "HUN",
+      "AirportName": {
+        "Zh_tw": "花蓮機場",
+        "En": "Hualien"
+      }
+    },
+    {
+      "AirportID": "IAB",
+      "AirportName": {
+        "Zh_tw": "堪薩斯",
+        "En": "Kansas City"
+      }
+    },
+    {
+      "AirportID": "IAD",
+      "AirportName": {
+        "Zh_tw": "華盛頓杜勒斯機國際場",
+        "En": "Washington Dulles Airport"
+      }
+    },
+    {
+      "AirportID": "IAH",
+      "AirportName": {
+        "Zh_tw": "休斯頓喬治布希洲際機場",
+        "En": "Houston"
+      }
+    },
+    {
+      "AirportID": "IBR",
+      "AirportName": {
+        "En": "Ibaraki / Ibaraki Airport"
+      }
+    },
+    {
+      "AirportID": "ICN",
+      "AirportName": {
+        "Zh_tw": "仁川國際機場",
+        "En": "Seoul"
+      }
+    },
+    {
+      "AirportID": "INC",
+      "AirportName": {
+        "Zh_tw": "銀川河東國際機場",
+        "En": "Yinchuan Hedong Airport"
+      }
+    },
+    {
+      "AirportID": "ISB",
+      "AirportName": {
+        "Zh_tw": "貝娜齊爾布托國際機場",
+        "En": "Islamabad"
+      }
+    },
+    {
+      "AirportID": "ISG",
+      "AirportName": {
+        "Zh_tw": "新石垣機場",
+        "En": "Ishigaki"
+      }
+    },
+    {
+      "AirportID": "ISL",
+      "AirportName": {
+        "Zh_tw": "阿塔蒂爾克國際機場",
+        "En": "Istanbul"
+      }
+    },
+    {
+      "AirportID": "IST",
+      "AirportName": {
+        "Zh_tw": "伊斯坦堡新機場",
+        "En": "?stanbul Havaliman?"
+      }
+    },
+    {
+      "AirportID": "ITM",
+      "AirportName": {
+        "Zh_tw": "大阪伊丹機場",
+        "En": "Itami Intl Airport"
+      }
+    },
+    {
+      "AirportID": "ITO",
+      "AirportName": {
+        "Zh_tw": "希羅 夏威夷",
+        "En": "HILO INTL"
+      }
+    },
+    {
+      "AirportID": "IUD",
+      "AirportName": {
+        "Zh_tw": "OTBH",
+        "En": "Al Udeid AB"
+      }
+    },
+    {
+      "AirportID": "IWJ",
+      "AirportName": {
+        "Zh_tw": "石見",
+        "En": "Iwami"
+      }
+    },
+    {
+      "AirportID": "IZO",
+      "AirportName": {
+        "Zh_tw": "出雲",
+        "En": "Izumo"
+      }
+    },
+    {
+      "AirportID": "JED",
+      "AirportName": {
+        "Zh_tw": "吉達機場",
+        "En": "Jeddah"
+      }
+    },
+    {
+      "AirportID": "JFK",
+      "AirportName": {
+        "Zh_tw": "約翰甘迺迪國際機場",
+        "En": "John F.Kennedy Airport"
+      }
+    },
+    {
+      "AirportID": "JHB",
+      "AirportName": {
+        "Zh_tw": "士乃",
+        "En": "Senai"
+      }
+    },
+    {
+      "AirportID": "JIL",
+      "AirportName": {
+        "Zh_tw": "吉林",
+        "En": "Jilin"
+      }
+    },
+    {
+      "AirportID": "JJN",
+      "AirportName": {
+        "Zh_tw": "泉州晉江機場",
+        "En": "Quanzhou Jinjiang Airport"
+      }
+    },
+    {
+      "AirportID": "JMU",
+      "AirportName": {
+        "Zh_tw": "佳木斯",
+        "En": "JIAMUSI"
+      }
+    },
+    {
+      "AirportID": "JNB",
+      "AirportName": {
+        "Zh_tw": "約翰尼斯堡奧利弗坦博國際機場"
+      }
+    },
+    {
+      "AirportID": "JOG",
+      "AirportName": {
+        "Zh_tw": "日惹國際機場",
+        "En": "Adisucipto International Airport"
+      }
+    },
+    {
+      "AirportID": "KBV",
+      "AirportName": {
+        "Zh_tw": "喀比",
+        "En": "Krabi"
+      }
+    },
+    {
+      "AirportID": "KCH",
+      "AirportName": {
+        "Zh_tw": "古晉國際機場",
+        "En": "Kuching"
+      }
+    },
+    {
+      "AirportID": "KCZ",
+      "AirportName": {
+        "Zh_tw": "高知機場",
+        "En": "KOCHI"
+      }
+    },
+    {
+      "AirportID": "KDH",
+      "AirportName": {
+        "Zh_tw": "阿富汗坎達哈",
+        "En": "Kandahar International Airport"
+      }
+    },
+    {
+      "AirportID": "KEF",
+      "AirportName": {
+        "Zh_tw": "雷克雅未克機場",
+        "En": "Reykjavik-Keflavik Airport"
+      }
+    },
+    {
+      "AirportID": "KHG",
+      "AirportName": {
+        "Zh_tw": "喀什機場",
+        "En": "Kashgar Airport"
+      }
+    },
+    {
+      "AirportID": "KHH",
+      "AirportName": {
+        "Zh_tw": "高雄小港國際機場",
+        "En": "Kaohsiung"
+      }
+    },
+    {
+      "AirportID": "KHI",
+      "AirportName": {
+        "Zh_tw": "真納國際機場",
+        "En": "KARACHI"
+      }
+    },
+    {
+      "AirportID": "KHN",
+      "AirportName": {
+        "Zh_tw": "南昌昌北國際機場",
+        "En": "Nanchang"
+      }
+    },
+    {
+      "AirportID": "KHV",
+      "AirportName": {
+        "Zh_tw": "哈巴羅夫斯克機場",
+        "En": "KHABAROVSK"
+      }
+    },
+    {
+      "AirportID": "KIJ",
+      "AirportName": {
+        "Zh_tw": "新潟機場",
+        "En": "Niigata"
+      }
+    },
+    {
+      "AirportID": "KIX",
+      "AirportName": {
+        "Zh_tw": "關西",
+        "En": "Osaka-Kansai Intl Airport"
+      }
+    },
+    {
+      "AirportID": "KJA",
+      "AirportName": {
+        "Zh_tw": "葉梅利亞諾夫",
+        "En": "Yemelyanovo"
+      }
+    },
+    {
+      "AirportID": "KKJ",
+      "AirportName": {
+        "Zh_tw": "北九州機場",
+        "En": "Fukuoka / Kita Kyushu / Kokura"
+      }
+    },
+    {
+      "AirportID": "KLO",
+      "AirportName": {
+        "Zh_tw": "長灘島卡利博國際機場"
+      }
+    },
+    {
+      "AirportID": "KMG",
+      "AirportName": {
+        "Zh_tw": "昆明巫家壩國際機場",
+        "En": "Kunming Wujiaba Airport"
+      }
+    },
+    {
+      "AirportID": "KMI",
+      "AirportName": {
+        "Zh_tw": "宮崎機場",
+        "En": "MIYAZAKI"
+      }
+    },
+    {
+      "AirportID": "KMJ",
+      "AirportName": {
+        "Zh_tw": "熊本機場",
+        "En": "KUMAMOTO"
+      }
+    },
+    {
+      "AirportID": "KMQ",
+      "AirportName": {
+        "Zh_tw": "小松機場",
+        "En": "KOMATSU"
+      }
+    },
+    {
+      "AirportID": "KNH",
+      "AirportName": {
+        "Zh_tw": "金門機場",
+        "En": "Kinmen Airport"
+      }
+    },
+    {
+      "AirportID": "KNO",
+      "AirportName": {
+        "Zh_tw": "棉蘭波羅尼亞 印尼",
+        "En": "MEDAN"
+      }
+    },
+    {
+      "AirportID": "KOA",
+      "AirportName": {
+        "Zh_tw": "科納國際機場",
+        "En": "KONA/KEALOHE"
+      }
+    },
+    {
+      "AirportID": "KOJ",
+      "AirportName": {
+        "Zh_tw": "鹿兒島機場",
+        "En": "Kagoshima"
+      }
+    },
+    {
+      "AirportID": "KOS",
+      "AirportName": {
+        "Zh_tw": "西哈努克國際機場",
+        "En": "Sihanouk"
+      }
+    },
+    {
+      "AirportID": "KOW",
+      "AirportName": {
+        "Zh_tw": "贛州",
+        "En": "Ganzhou"
+      }
+    },
+    {
+      "AirportID": "KPO",
+      "AirportName": {
+        "Zh_tw": "RKTH",
+        "En": "Pohang"
+      }
+    },
+    {
+      "AirportID": "KRW",
+      "AirportName": {
+        "Zh_tw": "土庫曼",
+        "En": "Turkmenbashi"
+      }
+    },
+    {
+      "AirportID": "KSA",
+      "AirportName": {
+        "Zh_tw": "PTSA",
+        "En": "Kosrae International Airport"
+      }
+    },
+    {
+      "AirportID": "KTM",
+      "AirportName": {
+        "Zh_tw": "加德滿都國際機場",
+        "En": "Tribhuvan International Airport"
+      }
+    },
+    {
+      "AirportID": "KUA",
+      "AirportName": {
+        "Zh_tw": "關丹機場",
+        "En": "KUANTAN"
+      }
+    },
+    {
+      "AirportID": "KUH",
+      "AirportName": {
+        "Zh_tw": "釧路機場",
+        "En": "Kushiro"
+      }
+    },
+    {
+      "AirportID": "KUL",
+      "AirportName": {
+        "Zh_tw": "吉隆坡國際機場",
+        "En": "Kuala Lumpur Intl Airport"
+      }
+    },
+    {
+      "AirportID": "KUM",
+      "AirportName": {
+        "Zh_tw": "屋久島",
+        "En": "Yakushima Airport"
+      }
+    },
+    {
+      "AirportID": "KWA",
+      "AirportName": {
+        "Zh_tw": "布丘",
+        "En": "KWAJALEIN/BUCHOLZ"
+      }
+    },
+    {
+      "AirportID": "KWE",
+      "AirportName": {
+        "Zh_tw": "貴陽龍洞堡國際機場",
+        "En": "Guiyang"
+      }
+    },
+    {
+      "AirportID": "KWI",
+      "AirportName": {
+        "Zh_tw": "科威特國際機場",
+        "En": "Kuwait Intl Airport"
+      }
+    },
+    {
+      "AirportID": "KWJ",
+      "AirportName": {
+        "Zh_tw": "光州機場",
+        "En": "Gwangju"
+      }
+    },
+    {
+      "AirportID": "KWL",
+      "AirportName": {
+        "Zh_tw": "桂林兩江國際機場",
+        "En": "Guilin Liangjiang Airport"
+      }
+    },
+    {
+      "AirportID": "KYD",
+      "AirportName": {
+        "Zh_tw": "蘭嶼機場",
+        "En": "Lanyu Airport"
+      }
+    },
+    {
+      "AirportID": "KZN",
+      "AirportName": {
+        "Zh_tw": "喀山機場",
+        "En": "Kazan"
+      }
+    },
+    {
+      "AirportID": "LAO",
+      "AirportName": {
+        "Zh_tw": "佬沃機場",
+        "En": "Laoag"
+      }
+    },
+    {
+      "AirportID": "LAS",
+      "AirportName": {
+        "Zh_tw": "拉斯維加斯麥卡倫國際機場",
+        "En": "McCarran"
+      }
+    },
+    {
+      "AirportID": "LAX",
+      "AirportName": {
+        "Zh_tw": "洛杉磯國際機場",
+        "En": "Los Angeles"
+      }
+    },
+    {
+      "AirportID": "LBU",
+      "AirportName": {
+        "Zh_tw": "納閩機場",
+        "En": "Labuan"
+      }
+    },
+    {
+      "AirportID": "LED",
+      "AirportName": {
+        "Zh_tw": "聖彼得堡普爾科沃機場",
+        "En": "Saint Petersburg"
+      }
+    },
+    {
+      "AirportID": "LGA",
+      "AirportName": {
+        "Zh_tw": "拉瓜地亞機場",
+        "En": "La Guardia Airport"
+      }
+    },
+    {
+      "AirportID": "LGB",
+      "AirportName": {
+        "Zh_tw": "長堤",
+        "En": "Long Beach"
+      }
+    },
+    {
+      "AirportID": "LGG",
+      "AirportName": {
+        "Zh_tw": "列日機場",
+        "En": "Liege"
+      }
+    },
+    {
+      "AirportID": "LGK",
+      "AirportName": {
+        "Zh_tw": "蘭卡威國際機場",
+        "En": "Langkawi"
+      }
+    },
+    {
+      "AirportID": "LGW",
+      "AirportName": {
+        "Zh_tw": "倫敦蓋威克國際機場",
+        "En": "LONDON GATWICK"
+      }
+    },
+    {
+      "AirportID": "LHE",
+      "AirportName": {
+        "Zh_tw": "阿拉馬伊克巴勒國際機場",
+        "En": "Lahore"
+      }
+    },
+    {
+      "AirportID": "LHR",
+      "AirportName": {
+        "Zh_tw": "倫敦希斯洛國際機場",
+        "En": "London"
+      }
+    },
+    {
+      "AirportID": "LHW",
+      "AirportName": {
+        "Zh_tw": "蘭州中川國際機場",
+        "En": "Zhongchuan Airport"
+      }
+    },
+    {
+      "AirportID": "LIL",
+      "AirportName": {
+        "Zh_tw": "里爾機場",
+        "En": "LILLE"
+      }
+    },
+    {
+      "AirportID": "LIM",
+      "AirportName": {
+        "Zh_tw": "利馬查維茲國際機場",
+        "En": "Jorge Chavez Intl Airport"
+      }
+    },
+    {
+      "AirportID": "LIS",
+      "AirportName": {
+        "Zh_tw": "里斯本機場",
+        "En": "Lisbon Intl Airport"
+      }
+    },
+    {
+      "AirportID": "LJG",
+      "AirportName": {
+        "Zh_tw": "麗江三義國際機場",
+        "En": "Lijiang Sanyi Airport"
+      }
+    },
+    {
+      "AirportID": "LNZ",
+      "AirportName": {
+        "Zh_tw": "林茲機場",
+        "En": "LINZ AUSTRIA"
+      }
+    },
+    {
+      "AirportID": "LSV",
+      "AirportName": {
+        "Zh_tw": "Nells Airforce Base",
+        "En": "Nells Airforce Base"
+      }
+    },
+    {
+      "AirportID": "LUX",
+      "AirportName": {
+        "Zh_tw": "盧森堡芬德爾國際機場",
+        "En": "Luxembourg / Luxembourg"
+      }
+    },
+    {
+      "AirportID": "LYA",
+      "AirportName": {
+        "Zh_tw": "洛陽北郊機場",
+        "En": "Luoyang Beijiao Airport"
+      }
+    },
+    {
+      "AirportID": "LZN",
+      "AirportName": {
+        "Zh_tw": "馬祖南竿機場",
+        "En": "Nangan Airport"
+      }
+    },
+    {
+      "AirportID": "MAA",
+      "AirportName": {
+        "Zh_tw": "清奈國際機場",
+        "En": "MADRAS"
+      }
+    },
+    {
+      "AirportID": "MAD",
+      "AirportName": {
+        "Zh_tw": "馬德里巴拉哈斯國際機場",
+        "En": "Barajas Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MAJ",
+      "AirportName": {
+        "Zh_tw": "馬紹爾",
+        "En": "MARSHELL I."
+      }
+    },
+    {
+      "AirportID": "MAN",
+      "AirportName": {
+        "Zh_tw": "曼徹斯特國際機場",
+        "En": "Manchester Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MCT",
+      "AirportName": {
+        "Zh_tw": "馬斯喀特國際機場",
+        "En": "MUSCAT"
+      }
+    },
+    {
+      "AirportID": "MDC",
+      "AirportName": {
+        "Zh_tw": "薩姆拉圖蘭吉國際機場",
+        "En": "MANADO"
+      }
+    },
+    {
+      "AirportID": "MDL",
+      "AirportName": {
+        "Zh_tw": "曼德勒",
+        "En": "Mandalay"
+      }
+    },
+    {
+      "AirportID": "MDW",
+      "AirportName": {
+        "Zh_tw": "芝加哥中途國際機場",
+        "En": "Chicago"
+      }
+    },
+    {
+      "AirportID": "MDY",
+      "AirportName": {
+        "Zh_tw": "中途島",
+        "En": "MIDWAY"
+      }
+    },
+    {
+      "AirportID": "MEB",
+      "AirportName": {
+        "Zh_tw": "YMEN",
+        "En": "Essendon Airport"
+      }
+    },
+    {
+      "AirportID": "MEL",
+      "AirportName": {
+        "Zh_tw": "墨爾本國際機場",
+        "En": "Melbourne"
+      }
+    },
+    {
+      "AirportID": "MEM",
+      "AirportName": {
+        "Zh_tw": "孟菲斯國際機場",
+        "En": "Memphis"
+      }
+    },
+    {
+      "AirportID": "MEX",
+      "AirportName": {
+        "Zh_tw": "墨西哥城國際機場",
+        "En": "Juarez Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MFK",
+      "AirportName": {
+        "Zh_tw": "馬祖北竿機場",
+        "En": "Beigan Airport"
+      }
+    },
+    {
+      "AirportID": "MFM",
+      "AirportName": {
+        "Zh_tw": "澳門國際機場",
+        "En": "Macau Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MHV",
+      "AirportName": {
+        "Zh_tw": "加州",
+        "En": "California"
+      }
+    },
+    {
+      "AirportID": "MIA",
+      "AirportName": {
+        "Zh_tw": "邁阿密國際機場",
+        "En": "Miami International Airport"
+      }
+    },
+    {
+      "AirportID": "MLE",
+      "AirportName": {
+        "En": "Maldives"
+      }
+    },
+    {
+      "AirportID": "MMB",
+      "AirportName": {
+        "Zh_tw": "女滿別",
+        "En": "MEMANBETSU"
+      }
+    },
+    {
+      "AirportID": "MMJ",
+      "AirportName": {
+        "Zh_tw": "清洲",
+        "En": "Kiyosu"
+      }
+    },
+    {
+      "AirportID": "MMY",
+      "AirportName": {
+        "Zh_tw": "宮古機場",
+        "En": "Miyako Jima"
+      }
+    },
+    {
+      "AirportID": "MNL",
+      "AirportName": {
+        "Zh_tw": "馬尼拉機場",
+        "En": "Ninoy Aquino Airport"
+      }
+    },
+    {
+      "AirportID": "MPH",
+      "AirportName": {
+        "Zh_tw": "卡提克蘭",
+        "En": "Caticlan"
+      }
+    },
+    {
+      "AirportID": "MRU",
+      "AirportName": {
+        "Zh_tw": "模里西斯國際機場",
+        "En": "Mauritius"
+      }
+    },
+    {
+      "AirportID": "MSP",
+      "AirportName": {
+        "Zh_tw": "明尼亞波利斯聖保羅國際機場",
+        "En": "MINNEAPOLIS"
+      }
+    },
+    {
+      "AirportID": "MSY",
+      "AirportName": {
+        "Zh_tw": "紐奧良國際機場",
+        "En": "New Orleans Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MUC",
+      "AirportName": {
+        "Zh_tw": "慕尼黑國際機場",
+        "En": "Munich Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MWX",
+      "AirportName": {
+        "Zh_tw": "務安",
+        "En": "MUAN"
+      }
+    },
+    {
+      "AirportID": "MXP",
+      "AirportName": {
+        "Zh_tw": "米蘭馬爾彭薩機場",
+        "En": "Malpensa Intl Airport"
+      }
+    },
+    {
+      "AirportID": "MXZ",
+      "AirportName": {
+        "Zh_tw": "梅縣長崗岌機場",
+        "En": "Meixian Airport"
+      }
+    },
+    {
+      "AirportID": "MYJ",
+      "AirportName": {
+        "Zh_tw": "日本松山機場",
+        "En": "MATSUYAMA"
+      }
+    },
+    {
+      "AirportID": "MYY",
+      "AirportName": {
+        "Zh_tw": "米里機場",
+        "En": "Miri"
+      }
+    },
+    {
+      "AirportID": "MZG",
+      "AirportName": {
+        "Zh_tw": "澎湖機場",
+        "En": "Penghu Airport"
+      }
+    },
+    {
+      "AirportID": "MZR",
+      "AirportName": {
+        "Zh_tw": "Mazari Sharif",
+        "En": "Mazari Sharif"
+      }
+    },
+    {
+      "AirportID": "NAP",
+      "AirportName": {
+        "Zh_tw": "拿坡里國際機場",
+        "En": "Naples Airport"
+      }
+    },
+    {
+      "AirportID": "NGB",
+      "AirportName": {
+        "Zh_tw": "寧波櫟社國際機場",
+        "En": "Ningbo"
+      }
+    },
+    {
+      "AirportID": "NGO",
+      "AirportName": {
+        "Zh_tw": "中部國際機場",
+        "En": "CHUBU CENTRAIR INTL"
+      }
+    },
+    {
+      "AirportID": "NGS",
+      "AirportName": {
+        "Zh_tw": "長崎機場",
+        "En": "Nagasaki"
+      }
+    },
+    {
+      "AirportID": "NKG",
+      "AirportName": {
+        "Zh_tw": "南京祿口國際機場",
+        "En": "Nanjing"
+      }
+    },
+    {
+      "AirportID": "NKM",
+      "AirportName": {
+        "Zh_tw": "名古屋",
+        "En": "Nagoya"
+      }
+    },
+    {
+      "AirportID": "NNG",
+      "AirportName": {
+        "Zh_tw": "南寧吳圩國際機場",
+        "En": "Nanning"
+      }
+    },
+    {
+      "AirportID": "NOU",
+      "AirportName": {
+        "Zh_tw": "努美阿國際機場",
+        "En": "NOUMEA NEW CALEDONIA"
+      }
+    },
+    {
+      "AirportID": "NRT",
+      "AirportName": {
+        "Zh_tw": "東京成田機場",
+        "En": "Tokyo-Narita Intl Airport"
+      }
+    },
+    {
+      "AirportID": "NTG",
+      "AirportName": {
+        "Zh_tw": "南通",
+        "En": "Nantong"
+      }
+    },
+    {
+      "AirportID": "NTQ",
+      "AirportName": {
+        "Zh_tw": "能登",
+        "En": "NOTO"
+      }
+    },
+    {
+      "AirportID": "OAK",
+      "AirportName": {
+        "Zh_tw": "奧克蘭",
+        "En": "Oakland"
+      }
+    },
+    {
+      "AirportID": "OBO",
+      "AirportName": {
+        "Zh_tw": "帶廣機場",
+        "En": "OBIHIRO"
+      }
+    },
+    {
+      "AirportID": "OGG",
+      "AirportName": {
+        "Zh_tw": "卡胡魯伊機場",
+        "En": "Dillingham Airfield"
+      }
+    },
+    {
+      "AirportID": "OGN",
+      "AirportName": {
+        "Zh_tw": "與那國島",
+        "En": "Yonaguni"
+      }
+    },
+    {
+      "AirportID": "OIT",
+      "AirportName": {
+        "Zh_tw": "大分機場",
+        "En": "OITA"
+      }
+    },
+    {
+      "AirportID": "OKA",
+      "AirportName": {
+        "Zh_tw": "沖縄",
+        "En": "Okinawa-Naha Airport"
+      }
+    },
+    {
+      "AirportID": "OKD",
+      "AirportName": {
+        "Zh_tw": "札幌",
+        "En": "Sapporo"
+      }
+    },
+    {
+      "AirportID": "OKJ",
+      "AirportName": {
+        "Zh_tw": "日本岡山機場",
+        "En": "OKAYAMA"
+      }
+    },
+    {
+      "AirportID": "OKO",
+      "AirportName": {
+        "Zh_tw": "橫田",
+        "En": "Yokota"
+      }
+    },
+    {
+      "AirportID": "OME",
+      "AirportName": {
+        "Zh_tw": "nome",
+        "En": "Nome Airport"
+      }
+    },
+    {
+      "AirportID": "ONJ",
+      "AirportName": {
+        "Zh_tw": "能代",
+        "En": "Noshiro"
+      }
+    },
+    {
+      "AirportID": "ONT",
+      "AirportName": {
+        "Zh_tw": "安大略",
+        "En": "ONTARIO"
+      }
+    },
+    {
+      "AirportID": "OOL",
+      "AirportName": {
+        "Zh_tw": "黃金海岸機場",
+        "En": "GOLD COAST"
+      }
+    },
+    {
+      "AirportID": "ORD",
+      "AirportName": {
+        "Zh_tw": "芝加哥歐海爾國際機場",
+        "En": "CHIGAGO"
+      }
+    },
+    {
+      "AirportID": "ORY",
+      "AirportName": {
+        "Zh_tw": "巴黎奧利機場",
+        "En": "Paris Orly Airport"
+      }
+    },
+    {
+      "AirportID": "OSL",
+      "AirportName": {
+        "Zh_tw": "奧斯陸加勒穆恩國際機場",
+        "En": "Gardermoen Intl Airport"
+      }
+    },
+    {
+      "AirportID": "OSN",
+      "AirportName": {
+        "Zh_tw": "Osan",
+        "En": "Osan AB"
+      }
+    },
+    {
+      "AirportID": "OST",
+      "AirportName": {
+        "Zh_tw": "奧斯坦德",
+        "En": "Ostend"
+      }
+    },
+    {
+      "AirportID": "OTP",
+      "AirportName": {
+        "Zh_tw": "布加勒斯特亨利科恩達機場",
+        "En": "BUCHAREST ROMANIA"
+      }
+    },
+    {
+      "AirportID": "OVB",
+      "AirportName": {
+        "Zh_tw": "俄羅斯",
+        "En": "Novosibirsk Tolmachevo Airport"
+      }
+    },
+    {
+      "AirportID": "PAE",
+      "AirportName": {
+        "Zh_tw": "華盛頓",
+        "En": "Washington"
+      }
+    },
+    {
+      "AirportID": "PBH",
+      "AirportName": {
+        "Zh_tw": "帕羅國際機場",
+        "En": "Paro Airport"
+      }
+    },
+    {
+      "AirportID": "PDX",
+      "AirportName": {
+        "Zh_tw": "波特蘭國際機場",
+        "En": "PORTLAND"
+      }
+    },
+    {
+      "AirportID": "PEK",
+      "AirportName": {
+        "Zh_tw": "北京首都國際機場",
+        "En": "Beijing"
+      }
+    },
+    {
+      "AirportID": "PEN",
+      "AirportName": {
+        "Zh_tw": "檳城國際機場",
+        "En": "Penang"
+      }
+    },
+    {
+      "AirportID": "PER",
+      "AirportName": {
+        "Zh_tw": "伯斯國際機場",
+        "En": "Perth Intl Airport"
+      }
+    },
+    {
+      "AirportID": "PFO",
+      "AirportName": {
+        "Zh_tw": "帕福斯",
+        "En": "Pafos"
+      }
+    },
+    {
+      "AirportID": "PHE",
+      "AirportName": {
+        "Zh_tw": "海德蘭港",
+        "En": "Port Hedland"
+      }
+    },
+    {
+      "AirportID": "PHL",
+      "AirportName": {
+        "Zh_tw": "費城國際機場",
+        "En": "PHILADELPHIA"
+      }
+    },
+    {
+      "AirportID": "PHX",
+      "AirportName": {
+        "Zh_tw": "鳳凰城天港國際機場",
+        "En": "Sky Harbor Airport"
+      }
+    },
+    {
+      "AirportID": "PIT",
+      "AirportName": {
+        "Zh_tw": "匹茲堡國際機場",
+        "En": "Pittsburgh Intl Airport"
+      }
+    },
+    {
+      "AirportID": "PKC",
+      "AirportName": {
+        "Zh_tw": "堪察加",
+        "En": "KAMCHATSKY"
+      }
+    },
+    {
+      "AirportID": "PNH",
+      "AirportName": {
+        "Zh_tw": "金邊國際機場",
+        "En": "Phnom Pehn Intl Aiport"
+      }
+    },
+    {
+      "AirportID": "POM",
+      "AirportName": {
+        "Zh_tw": "傑克遜斯國際機場",
+        "En": "PORT MORESBY"
+      }
+    },
+    {
+      "AirportID": "PPL",
+      "AirportName": {
+        "En": "Phaplu機場"
+      }
+    },
+    {
+      "AirportID": "PPS",
+      "AirportName": {
+        "Zh_tw": "公主港",
+        "En": "Puerto Princesa"
+      }
+    },
+    {
+      "AirportID": "PQC",
+      "AirportName": {
+        "Zh_tw": "富國機場",
+        "En": "Phu Quoc International Airport"
+      }
+    },
+    {
+      "AirportID": "PRG",
+      "AirportName": {
+        "Zh_tw": "布拉格機場",
+        "En": "Prague Airport"
+      }
+    },
+    {
+      "AirportID": "PSA",
+      "AirportName": {
+        "Zh_tw": "比薩聖朱斯托機場",
+        "En": "Pisa-San Giusto Airport"
+      }
+    },
+    {
+      "AirportID": "PTK",
+      "AirportName": {
+        "Zh_tw": "PONTICAOAKLAND",
+        "En": "Auckland Airport"
+      }
+    },
+    {
+      "AirportID": "PTY",
+      "AirportName": {
+        "Zh_tw": "巴拿馬托庫門國際機場",
+        "En": "Tocumen International Airport"
+      }
+    },
+    {
+      "AirportID": "PUS",
+      "AirportName": {
+        "Zh_tw": "釜山金海國際機場",
+        "En": "Pusan Gimhae Airport"
+      }
+    },
+    {
+      "AirportID": "PVG",
+      "AirportName": {
+        "Zh_tw": "上海",
+        "En": "Shanghai Pudong Airport"
+      }
+    },
+    {
+      "AirportID": "PWM",
+      "AirportName": {
+        "Zh_tw": "波特蘭國際噴射機機場",
+        "En": "Portland Intl Jetport"
+      }
+    },
+    {
+      "AirportID": "QPG",
+      "AirportName": {
+        "Zh_tw": "巴耶利峇",
+        "En": "Paya Lebar"
+      }
+    },
+    {
+      "AirportID": "REP",
+      "AirportName": {
+        "Zh_tw": "吳哥國際機場",
+        "En": "Siem"
+      }
+    },
+    {
+      "AirportID": "RGN",
+      "AirportName": {
+        "Zh_tw": "仰光國際機場",
+        "En": "Yangon"
+      }
+    },
+    {
+      "AirportID": "RMQ",
+      "AirportName": {
+        "Zh_tw": "臺中國際機場",
+        "En": "Ching Chung Kang Airport"
+      }
+    },
+    {
+      "AirportID": "RNO",
+      "AirportName": {
+        "Zh_tw": "雷諾太浩國際機場",
+        "En": "Reno-Tahoe International Airport"
+      }
+    },
+    {
+      "AirportID": "ROR",
+      "AirportName": {
+        "Zh_tw": "帛琉國際機場",
+        "En": "Palau"
+      }
+    },
+    {
+      "AirportID": "RUH",
+      "AirportName": {
+        "Zh_tw": "哈立德國王國際機場",
+        "En": "Riyadh"
+      }
+    },
+    {
+      "AirportID": "SAN",
+      "AirportName": {
+        "Zh_tw": "聖地牙哥國際機場",
+        "En": "San Diego"
+      }
+    },
+    {
+      "AirportID": "SCL",
+      "AirportName": {
+        "Zh_tw": "智利聖地牙哥國際機場",
+        "En": "Santiago Intl Airport"
+      }
+    },
+    {
+      "AirportID": "SDJ",
+      "AirportName": {
+        "Zh_tw": "仙台機場",
+        "En": "Sendai"
+      }
+    },
+    {
+      "AirportID": "SDK",
+      "AirportName": {
+        "Zh_tw": "山打根機場",
+        "En": "Sandakan Airport"
+      }
+    },
+    {
+      "AirportID": "SDU",
+      "AirportName": {
+        "Zh_tw": "聖杜蒙特機場",
+        "En": "Santos Dumont Airport"
+      }
+    },
+    {
+      "AirportID": "SEA",
+      "AirportName": {
+        "Zh_tw": "西雅圖國際機場",
+        "En": "Seattle"
+      }
+    },
+    {
+      "AirportID": "SFO",
+      "AirportName": {
+        "Zh_tw": "舊金山國際機場",
+        "En": "San Francisco"
+      }
+    },
+    {
+      "AirportID": "SFS",
+      "AirportName": {
+        "Zh_tw": "蘇比克",
+        "En": "SFS"
+      }
+    },
+    {
+      "AirportID": "SGN",
+      "AirportName": {
+        "Zh_tw": "胡志明市",
+        "En": "Tan Son Nhat Intl Airport"
+      }
+    },
+    {
+      "AirportID": "SHA",
+      "AirportName": {
+        "Zh_tw": "上海虹橋國際機場",
+        "En": "Shanghai Hongqiao Airport"
+      }
+    },
+    {
+      "AirportID": "SHB",
+      "AirportName": {
+        "Zh_tw": "中標津",
+        "En": "Nakashibetsu"
+      }
+    },
+    {
+      "AirportID": "SHE",
+      "AirportName": {
+        "Zh_tw": "瀋陽桃仙國際機場",
+        "En": "Shenyang Taoxian Airport"
+      }
+    },
+    {
+      "AirportID": "SHJ",
+      "AirportName": {
+        "Zh_tw": "沙迦",
+        "En": "SHARJAH"
+      }
+    },
+    {
+      "AirportID": "SHM",
+      "AirportName": {
+        "Zh_tw": "南紀白濱機場",
+        "En": "Shirahama"
+      }
+    },
+    {
+      "AirportID": "SIN",
+      "AirportName": {
+        "Zh_tw": "新加坡樟宜國際機場",
+        "En": "Singapore-Changi Airport"
+      }
+    },
+    {
+      "AirportID": "SJC",
+      "AirportName": {
+        "Zh_tw": "聖荷西國際機場",
+        "En": "SAN JOSE"
+      }
+    },
+    {
+      "AirportID": "SJW",
+      "AirportName": {
+        "Zh_tw": "石家莊正定國際機場",
+        "En": "Shijiazhuang"
+      }
+    },
+    {
+      "AirportID": "SMF",
+      "AirportName": {
+        "Zh_tw": "沙加緬度",
+        "En": "SACRAMENTO"
+      }
+    },
+    {
+      "AirportID": "SOF",
+      "AirportName": {
+        "Zh_tw": "索菲亞國際機場",
+        "En": "Sofia Airport"
+      }
+    },
+    {
+      "AirportID": "SPK",
+      "AirportName": {
+        "Zh_tw": "千穗",
+        "En": "Chitose"
+      }
+    },
+    {
+      "AirportID": "SPN",
+      "AirportName": {
+        "Zh_tw": "塞班國際機場",
+        "En": "SAIPAN"
+      }
+    },
+    {
+      "AirportID": "STL",
+      "AirportName": {
+        "Zh_tw": "聖路易國際機場",
+        "En": "St. Louis Intl Airport"
+      }
+    },
+    {
+      "AirportID": "STN",
+      "AirportName": {
+        "Zh_tw": "倫敦史坦斯特國際機場",
+        "En": "Stansted Intl Airport"
+      }
+    },
+    {
+      "AirportID": "STP",
+      "AirportName": {
+        "Zh_tw": "Joint"
+      }
+    },
+    {
+      "AirportID": "SUB",
+      "AirportName": {
+        "Zh_tw": "泗水朱安達國際機場",
+        "En": "Banda Udara"
+      }
+    },
+    {
+      "AirportID": "SVO",
+      "AirportName": {
+        "Zh_tw": "莫斯科謝列梅捷沃國際機場",
+        "En": "Sheremetyevo Airport"
+      }
+    },
+    {
+      "AirportID": "SWA",
+      "AirportName": {
+        "Zh_tw": "汕頭外砂機場",
+        "En": "Shantou Waisha Airport"
+      }
+    },
+    {
+      "AirportID": "SXF",
+      "AirportName": {
+        "Zh_tw": "柏林香尼斐機場",
+        "En": "Berlin-Schonefeld Airport"
+      }
+    },
+    {
+      "AirportID": "SYA",
+      "AirportName": {
+        "Zh_tw": "敘米亞",
+        "En": "SHEMYA"
+      }
+    },
+    {
+      "AirportID": "SYD",
+      "AirportName": {
+        "Zh_tw": "雪梨國際機場",
+        "En": "Sydney Airport"
+      }
+    },
+    {
+      "AirportID": "SYO",
+      "AirportName": {
+        "Zh_tw": "庄內",
+        "En": "Shonai"
+      }
+    },
+    {
+      "AirportID": "SYX",
+      "AirportName": {
+        "Zh_tw": "三亞鳳凰國際機場",
+        "En": "Phoenix"
+      }
+    },
+    {
+      "AirportID": "SZB",
+      "AirportName": {
+        "Zh_tw": "蘇丹阿都阿?沙機場",
+        "En": "Sultan Abdul Aziz Shah Airport"
+      }
+    },
+    {
+      "AirportID": "SZG",
+      "AirportName": {
+        "Zh_tw": "薩爾茨堡機場",
+        "En": "Salzburg Airport"
+      }
+    },
+    {
+      "AirportID": "SZX",
+      "AirportName": {
+        "Zh_tw": "深圳寶安國際機場",
+        "En": "Shenzhen"
+      }
+    },
+    {
+      "AirportID": "TAE",
+      "AirportName": {
+        "Zh_tw": "大邱機場",
+        "En": "Daegu"
+      }
+    },
+    {
+      "AirportID": "TAK",
+      "AirportName": {
+        "Zh_tw": "高松",
+        "En": "TAKAMATSU"
+      }
+    },
+    {
+      "AirportID": "TAO",
+      "AirportName": {
+        "Zh_tw": "青島流亭國際機場",
+        "En": "Qingdao"
+      }
+    },
+    {
+      "AirportID": "TAS",
+      "AirportName": {
+        "Zh_tw": "塔什干國際機場",
+        "En": "Tashkent International Airport"
+      }
+    },
+    {
+      "AirportID": "TBU",
+      "AirportName": {
+        "Zh_tw": "努瓜婁發國際機場",
+        "En": "Tonga"
+      }
+    },
+    {
+      "AirportID": "TCM",
+      "AirportName": {
+        "Zh_tw": "Tacoma",
+        "En": "Joint Base Lewis-McChord (JBLM)"
+      }
+    },
+    {
+      "AirportID": "TFU",
+      "AirportName": {
+        "Zh_tw": "成都天府",
+        "En": "Chengdu Tianfu"
+      }
+    },
+    {
+      "AirportID": "THR",
+      "AirportName": {
+        "Zh_tw": "梅赫拉巴德國際機場",
+        "En": "TEHRAN"
+      }
+    },
+    {
+      "AirportID": "THU",
+      "AirportName": {
+        "Zh_tw": "格陵蘭島",
+        "En": "Thule Greenland"
+      }
+    },
+    {
+      "AirportID": "TKN",
+      "AirportName": {
+        "Zh_tw": "徳之島機場",
+        "En": "Tokunoshima Airport"
+      }
+    },
+    {
+      "AirportID": "TKS",
+      "AirportName": {
+        "Zh_tw": "德島",
+        "En": "Tokushima"
+      }
+    },
+    {
+      "AirportID": "TLS",
+      "AirportName": {
+        "Zh_tw": "土魯斯布拉尼亞克機場",
+        "En": "Toulouse"
+      }
+    },
+    {
+      "AirportID": "TLV",
+      "AirportName": {
+        "Zh_tw": "本古里安國際機場",
+        "En": "Ben-Gurion Airport"
+      }
+    },
+    {
+      "AirportID": "TNA",
+      "AirportName": {
+        "Zh_tw": "濟南遙牆國際機場",
+        "En": "Jinan"
+      }
+    },
+    {
+      "AirportID": "TNE",
+      "AirportName": {
+        "Zh_tw": "種子島",
+        "En": "Tanegashima"
+      }
+    },
+    {
+      "AirportID": "TNN",
+      "AirportName": {
+        "Zh_tw": "臺南機場",
+        "En": "Tainan Airport"
+      }
+    },
+    {
+      "AirportID": "TOY",
+      "AirportName": {
+        "Zh_tw": "富山機場",
+        "En": "Toyama /"
+      }
+    },
+    {
+      "AirportID": "TPE",
+      "AirportName": {
+        "Zh_tw": "桃園國際機場",
+        "En": "Taoyuan"
+      }
+    },
+    {
+      "AirportID": "TSA",
+      "AirportName": {
+        "Zh_tw": "臺北松山國際機場",
+        "En": "Songshan Airport"
+      }
+    },
+    {
+      "AirportID": "TSN",
+      "AirportName": {
+        "Zh_tw": "天津濱海國際機場",
+        "En": "Tianjin"
+      }
+    },
+    {
+      "AirportID": "TSV",
+      "AirportName": {
+        "Zh_tw": "湯斯維爾機場",
+        "En": "TOWNSVILLE"
+      }
+    },
+    {
+      "AirportID": "TTJ",
+      "AirportName": {
+        "Zh_tw": "鳥取",
+        "En": "TOTTORI"
+      }
+    },
+    {
+      "AirportID": "TTT",
+      "AirportName": {
+        "Zh_tw": "臺東機場",
+        "En": "Taitung Airport"
+      }
+    },
+    {
+      "AirportID": "TXN",
+      "AirportName": {
+        "Zh_tw": "黃山屯溪國際機場",
+        "En": "Huangshan Airport"
+      }
+    },
+    {
+      "AirportID": "TYN",
+      "AirportName": {
+        "Zh_tw": "太原武宿國際機場",
+        "En": "Taiyuan"
+      }
+    },
+    {
+      "AirportID": "UAB",
+      "AirportName": {
+        "En": "VAB"
+      }
+    },
+    {
+      "AirportID": "UAM",
+      "AirportName": {
+        "Zh_tw": "安德森空軍基地",
+        "En": "ANDERSON AFB."
+      }
+    },
+    {
+      "AirportID": "UBJ",
+      "AirportName": {
+        "Zh_tw": "山口宇部機場",
+        "En": "Yamaguchi-Ube"
+      }
+    },
+    {
+      "AirportID": "UBP",
+      "AirportName": {
+        "Zh_tw": "烏文府",
+        "En": "Ubon Ratchathni"
+      }
+    },
+    {
+      "AirportID": "UFA",
+      "AirportName": {
+        "Zh_tw": "烏法機場",
+        "En": "Ufa International Airport"
+      }
+    },
+    {
+      "AirportID": "UKB",
+      "AirportName": {
+        "Zh_tw": "神戶",
+        "En": "Kobe Airport"
+      }
+    },
+    {
+      "AirportID": "ULN",
+      "AirportName": {
+        "Zh_tw": "成吉思汗國際機場",
+        "En": "Buyant Uhaa Intl Airport"
+      }
+    },
+    {
+      "AirportID": "URC",
+      "AirportName": {
+        "Zh_tw": "烏魯木齊地窩堡國際機場",
+        "En": "Urumqi"
+      }
+    },
+    {
+      "AirportID": "URT",
+      "AirportName": {
+        "Zh_tw": "素叻他尼機場",
+        "En": "Surat Thani"
+      }
+    },
+    {
+      "AirportID": "USM",
+      "AirportName": {
+        "Zh_tw": "蘇梅國際機場",
+        "En": "Samui"
+      }
+    },
+    {
+      "AirportID": "USN",
+      "AirportName": {
+        "Zh_tw": "蔚山",
+        "En": "Ulsan"
+      }
+    },
+    {
+      "AirportID": "UTH",
+      "AirportName": {
+        "Zh_tw": "烏隆他尼國際機場",
+        "En": "Udon Thani"
+      }
+    },
+    {
+      "AirportID": "UTP",
+      "AirportName": {
+        "Zh_tw": "烏打拋",
+        "En": "U-Tapao"
+      }
+    },
+    {
+      "AirportID": "UUS",
+      "AirportName": {
+        "Zh_tw": "庫頁島",
+        "En": "YUZHNO-SAKHALINSK/KHOMUTOVO"
+      }
+    },
+    {
+      "AirportID": "VAR",
+      "AirportName": {
+        "Zh_tw": "瓦爾納國際機場",
+        "En": "VARNA BULGARIA"
+      }
+    },
+    {
+      "AirportID": "VCA",
+      "AirportName": {
+        "Zh_tw": "芹苴",
+        "En": "Can Tho"
+      }
+    },
+    {
+      "AirportID": "VCE",
+      "AirportName": {
+        "Zh_tw": "威尼斯泰塞拉機場",
+        "En": "Venice Intl Airport"
+      }
+    },
+    {
+      "AirportID": "VDO",
+      "AirportName": {
+        "Zh_tw": "雲屯國際機場",
+        "En": "Van Don International Airport"
+      }
+    },
+    {
+      "AirportID": "VIE",
+      "AirportName": {
+        "Zh_tw": "維也納國際機場",
+        "En": "WIEN-SCHWECHAT"
+      }
+    },
+    {
+      "AirportID": "VII",
+      "AirportName": {
+        "Zh_tw": "榮市",
+        "En": "Vinh International Airport"
+      }
+    },
+    {
+      "AirportID": "VKO",
+      "AirportName": {
+        "Zh_tw": "莫斯科伏努科沃國際機場",
+        "En": "Vnukovo"
+      }
+    },
+    {
+      "AirportID": "VNY",
+      "AirportName": {
+        "Zh_tw": "KVNY",
+        "En": "Van Nuys Airport"
+      }
+    },
+    {
+      "AirportID": "VTE",
+      "AirportName": {
+        "Zh_tw": "永珍瓦岱國際機場",
+        "En": "WATTAY INTL"
+      }
+    },
+    {
+      "AirportID": "VVO",
+      "AirportName": {
+        "Zh_tw": "海參崴國際機場",
+        "En": "VLADIVOSTOK"
+      }
+    },
+    {
+      "AirportID": "WAW",
+      "AirportName": {
+        "Zh_tw": "華沙蕭邦國際機場",
+        "En": "Warsaw Intl Airport"
+      }
+    },
+    {
+      "AirportID": "WEH",
+      "AirportName": {
+        "Zh_tw": "威海大水泊機場",
+        "En": "Weihai Dashuibo Airport"
+      }
+    },
+    {
+      "AirportID": "WKJ",
+      "AirportName": {
+        "Zh_tw": "稚內機場",
+        "En": "Wakkanai"
+      }
+    },
+    {
+      "AirportID": "WLG",
+      "AirportName": {
+        "Zh_tw": "威靈頓國際機場",
+        "En": "WELLINGTON"
+      }
+    },
+    {
+      "AirportID": "WNZ",
+      "AirportName": {
+        "Zh_tw": "溫州龍灣國際機場",
+        "En": "Wenzhou Longwan Airport"
+      }
+    },
+    {
+      "AirportID": "WOT",
+      "AirportName": {
+        "Zh_tw": "望安機場",
+        "En": "Wang-an"
+      }
+    },
+    {
+      "AirportID": "WUH",
+      "AirportName": {
+        "Zh_tw": "武漢天河國際機場",
+        "En": "Wuhan"
+      }
+    },
+    {
+      "AirportID": "WUS",
+      "AirportName": {
+        "Zh_tw": "武夷山機場",
+        "En": "Wuyishan Airport"
+      }
+    },
+    {
+      "AirportID": "WUX",
+      "AirportName": {
+        "Zh_tw": "無錫碩放國際機場",
+        "En": "Wuxi Shuofang Airport"
+      }
+    },
+    {
+      "AirportID": "XIY",
+      "AirportName": {
+        "Zh_tw": "西安咸陽國際機場",
+        "En": "XIAN"
+      }
+    },
+    {
+      "AirportID": "XMN",
+      "AirportName": {
+        "Zh_tw": "廈門高崎國際機場",
+        "En": "Xiamen"
+      }
+    },
+    {
+      "AirportID": "XNN",
+      "AirportName": {
+        "Zh_tw": "西寧曹家堡機場",
+        "En": "Xining Caojiabao Airport"
+      }
+    },
+    {
+      "AirportID": "XSP",
+      "AirportName": {
+        "Zh_tw": "實里達",
+        "En": "Seletar"
+      }
+    },
+    {
+      "AirportID": "XUZ",
+      "AirportName": {
+        "Zh_tw": "徐州觀音國際機場",
+        "En": "Xuzhou Guanyin Airport"
+      }
+    },
+    {
+      "AirportID": "XXN",
+      "AirportName": {
+        "Zh_tw": "利雅德",
+        "En": "Riyadh"
+      }
+    },
+    {
+      "AirportID": "YAP",
+      "AirportName": {
+        "Zh_tw": "雅蒲島國際機場",
+        "En": "YAP INTL"
+      }
+    },
+    {
+      "AirportID": "YGJ",
+      "AirportName": {
+        "Zh_tw": "米子機場"
+      }
+    },
+    {
+      "AirportID": "YIH",
+      "AirportName": {
+        "Zh_tw": "宜昌三峽機場",
+        "En": "Yichang Sanxia Airport"
+      }
+    },
+    {
+      "AirportID": "YIW",
+      "AirportName": {
+        "Zh_tw": "義烏機場",
+        "En": "Yiwu"
+      }
+    },
+    {
+      "AirportID": "YMX",
+      "AirportName": {
+        "Zh_tw": "蒙特婁(加拿大)",
+        "En": "Montreal Mirabel Canada"
+      }
+    },
+    {
+      "AirportID": "YNJ",
+      "AirportName": {
+        "Zh_tw": "延吉朝陽川國際機場",
+        "En": "Yanji"
+      }
+    },
+    {
+      "AirportID": "YNT",
+      "AirportName": {
+        "Zh_tw": "煙台",
+        "En": "Yantai"
+      }
+    },
+    {
+      "AirportID": "YNY",
+      "AirportName": {
+        "Zh_tw": "襄陽",
+        "En": "Yangyang"
+      }
+    },
+    {
+      "AirportID": "YNZ",
+      "AirportName": {
+        "Zh_tw": "鹽城南洋機場",
+        "En": "Yan Cheng Airport"
+      }
+    },
+    {
+      "AirportID": "YOW",
+      "AirportName": {
+        "Zh_tw": "渥太華國際機場",
+        "En": "Ottawa Canada"
+      }
+    },
+    {
+      "AirportID": "YQB",
+      "AirportName": {
+        "Zh_tw": "魁北克(加拿大)",
+        "En": "Quebec Canada"
+      }
+    },
+    {
+      "AirportID": "YQQ",
+      "AirportName": {
+        "Zh_tw": "柯摩克斯",
+        "En": "COMOX B.C."
+      }
+    },
+    {
+      "AirportID": "YQX",
+      "AirportName": {
+        "Zh_tw": "甘德機場",
+        "En": "Gander International Airport"
+      }
+    },
+    {
+      "AirportID": "YTY",
+      "AirportName": {
+        "Zh_tw": "揚州",
+        "En": "Yangzhou Taizhou"
+      }
+    },
+    {
+      "AirportID": "YUL",
+      "AirportName": {
+        "Zh_tw": "蒙特利爾國際機場",
+        "En": "Montreal-Trudeau Airport"
+      }
+    },
+    {
+      "AirportID": "YVR",
+      "AirportName": {
+        "Zh_tw": "溫哥華國際機場",
+        "En": "Vancouver"
+      }
+    },
+    {
+      "AirportID": "YXX",
+      "AirportName": {
+        "Zh_tw": "亞伯斯福特市",
+        "En": "ABBOTSFORD B.C."
+      }
+    },
+    {
+      "AirportID": "YXY",
+      "AirportName": {
+        "Zh_tw": "Whitehorse",
+        "En": "Whitehorse"
+      }
+    },
+    {
+      "AirportID": "YYC",
+      "AirportName": {
+        "Zh_tw": "卡加利國際機場",
+        "En": "CALGARY"
+      }
+    },
+    {
+      "AirportID": "YYZ",
+      "AirportName": {
+        "Zh_tw": "多倫多國際機場",
+        "En": "Lester B. Pearson Airport"
+      }
+    },
+    {
+      "AirportID": "ZAG",
+      "AirportName": {
+        "Zh_tw": "薩格勒布機場",
+        "En": "Zagreb-Pleso Airport"
+      }
+    },
+    {
+      "AirportID": "ZAM",
+      "AirportName": {
+        "Zh_tw": "三寶顏機場",
+        "En": "Zamboanga"
+      }
+    },
+    {
+      "AirportID": "ZRH",
+      "AirportName": {
+        "Zh_tw": "蘇黎世機場",
+        "En": "Zurich-Kloten Airport"
+      }
+    }
+  ]
+}
