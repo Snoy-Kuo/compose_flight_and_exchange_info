@@ -13,7 +13,7 @@ This is a Jetpack Compose-based app that displays flight and exchange rate infor
  - Windows 11
  - Android Studio Narwhal Patch 1
  - Android SDK version 36
- - JDK: 21.0.6(Android Studio Enbeded JVM)
+ - JDK: 21.0.6(Android Studio Embedded JVM)
  - Gradle: 8.14.3
  - Kotlin: 2.2.0
  - Compose: 2025.07.00
