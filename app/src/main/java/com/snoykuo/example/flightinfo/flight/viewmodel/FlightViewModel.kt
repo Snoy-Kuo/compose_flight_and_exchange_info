@@ -2,12 +2,14 @@ package com.snoykuo.example.flightinfo.flight.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.snoykuo.example.flightinfo.common.data.DataResult
 import com.snoykuo.example.flightinfo.common.util.millisToLocalDateTime
 import com.snoykuo.example.flightinfo.flight.data.FlightInfo
 import com.snoykuo.example.flightinfo.flight.repo.FlightRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,8 +26,8 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
     private val _departures = MutableStateFlow<List<FlightInfo>>(emptyList())
     val departures: StateFlow<List<FlightInfo>> = _departures
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error
+    private val _message = MutableStateFlow<String?>(null)
+    val message: StateFlow<String?> = _message
 
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
@@ -33,12 +35,12 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
     private val _lastUpdated = MutableStateFlow<LocalDateTime?>(null)
     val lastUpdated: StateFlow<LocalDateTime?> = _lastUpdated
 
-    init {
-        startFlightAutoRefresh()
-    }
+    private var refreshJob: Job? = null
 
-    private fun startFlightAutoRefresh() {
-        viewModelScope.launch {
+    fun startFlightAutoRefresh() {
+        if (refreshJob?.isActive == true) return
+
+        refreshJob = viewModelScope.launch {
             while (isActive) {
                 fetchFlightData()
                 delay(600_000) //10分一次，這頻率，免費的還是會用完，每IP每天20次，想好好使用請申請TDX API Key囉
@@ -46,30 +48,46 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
         }
     }
 
-    private suspend fun fetchFlightData() {
-        val result = withContext(Dispatchers.IO) {
-            repository.getFlights()
-        }
-        Log.d("RDTest", "result=$result")
-        _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
-        when (result) {
-            is DataResult.Success -> {
-                updateFlights(result.data)
-                _error.value = null
-            }
+    fun stopFlightAutoRefresh() {
+        refreshJob?.cancel()
+        refreshJob = null
+    }
 
-            is DataResult.Error -> {
-                result.backupData?.let {
-                    updateFlights(it)
-                    Log.w("RDTest", " 網路問題${result.error}")
-                    _error.value = "網路問題"
-                } ?: run {
-                    Log.w("RDTest", "資料讀取失敗${result.error}")
-                    _error.value = "資料讀取失敗"
-                    _arrivals.value = emptyList()
-                    _departures.value = emptyList()
+    private suspend fun fetchFlightData() {
+        _isLoading.value = true
+        _message.value = "載入中..."
+        val startTime = System.currentTimeMillis()
+        try {
+            val result = withContext(Dispatchers.IO) {
+                repository.getFlights()
+            }
+            Log.d("RDTest", "result=$result")
+            _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
+            when (result) {
+                is DataResult.Success -> {
+                    updateFlights(result.data)
+                    _message.value = null
+                }
+
+                is DataResult.Error -> {
+                    result.backupData?.let {
+                        updateFlights(it)
+                        Log.w("RDTest", " 網路問題${result.error}")
+                        _message.value = "網路問題"
+                    } ?: run {
+                        Log.w("RDTest", "資料讀取失敗${result.error}")
+                        _message.value = "資料讀取失敗"
+                        _arrivals.value = emptyList()
+                        _departures.value = emptyList()
+                    }
                 }
             }
+        } finally {
+            _isLoading.value = false
+            val elapsed = System.currentTimeMillis() - startTime
+            val remaining = 1000L - elapsed
+            if (remaining > 0) delay(remaining)
+            _isLoading.value = false
         }
     }
 
@@ -81,12 +99,14 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
 
     fun retryFetch() {
         viewModelScope.launch {
-            _isLoading.value = true
-            try {
-                fetchFlightData()
-            } finally {
-                _isLoading.value = false
-            }
+            fetchFlightData()
         }
+    }
+}
+
+class FlightViewModelFactory(private val repo: FlightRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        @Suppress("UNCHECKED_CAST")
+        return FlightViewModel(repo) as T
     }
 }

@@ -42,6 +42,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.snoykuo.example.flightinfo.exchange.datasource.FallbackExchangeRateDataSource
 import com.snoykuo.example.flightinfo.exchange.datasource.LocalExchangeRateDataSource
 import com.snoykuo.example.flightinfo.exchange.datasource.NetworkModule.exchangeApi
@@ -50,7 +51,7 @@ import com.snoykuo.example.flightinfo.exchange.repo.DefaultExchangeRateRepositor
 import com.snoykuo.example.flightinfo.exchange.ui.page.CalculatorBottomSheet
 import com.snoykuo.example.flightinfo.exchange.ui.page.ExchangeRatePage
 import com.snoykuo.example.flightinfo.exchange.viewmodel.ExchangeRateViewModel
-import com.snoykuo.example.flightinfo.flight.data.FlightInfo
+import com.snoykuo.example.flightinfo.exchange.viewmodel.ExchangeRateViewModelFactory
 import com.snoykuo.example.flightinfo.flight.datasource.FallbackAirportDataSource
 import com.snoykuo.example.flightinfo.flight.datasource.FallbackFlightDataSource
 import com.snoykuo.example.flightinfo.flight.datasource.LocalAirportDataSource
@@ -62,7 +63,7 @@ import com.snoykuo.example.flightinfo.flight.repo.DefaultAirportRepository
 import com.snoykuo.example.flightinfo.flight.repo.DefaultFlightRepository
 import com.snoykuo.example.flightinfo.flight.ui.page.FlightPage
 import com.snoykuo.example.flightinfo.flight.viewmodel.FlightViewModel
-import org.threeten.bp.LocalDateTime
+import com.snoykuo.example.flightinfo.flight.viewmodel.FlightViewModelFactory
 
 @SuppressLint("ContextCastToActivity", "UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
@@ -77,48 +78,38 @@ fun MainLayout() {
 
     var selectedIndex by rememberSaveable { mutableIntStateOf(0) }
 
-    val remoteAirport = TdxAirportDataSource(NetworkModule.airportApi)
-    val localAirport = LocalAirportDataSource(context)
-    val fallbackAirport = FallbackAirportDataSource(context)
     val airportRepo = DefaultAirportRepository(
-        remote = remoteAirport,
-        local = localAirport,
-        fallback = fallbackAirport
+        remote = TdxAirportDataSource(NetworkModule.airportApi),
+        local = LocalAirportDataSource(context),
+        fallback = FallbackAirportDataSource(context)
     )
 
-    val flightViewModel = remember {
-        val flightRepo = DefaultFlightRepository(
+    val flightRepo = remember {
+        DefaultFlightRepository(
             remote = TdxFlightDataSource(NetworkModule.flightApi),
-//            remote = CsvFlightDataSource(),
             local = LocalFlightDataSource(context),
             fallback = FallbackFlightDataSource(context),
             airportRepo = airportRepo
-//            airportRepo = null
         )
-        FlightViewModel(flightRepo)
     }
+    val flightViewModel: FlightViewModel = viewModel(
+        factory = FlightViewModelFactory(flightRepo)
+    )
 
-    val exchangeRateViewModel = remember {
-        val remoteExchange = RemoteExchangeRateDataSource(exchangeApi)
-        val localExchange = LocalExchangeRateDataSource(context)
-        val fallbackExchange = FallbackExchangeRateDataSource(context)
-        val exchangeRepo =
-            DefaultExchangeRateRepository(remoteExchange, localExchange, fallbackExchange)
-        ExchangeRateViewModel(exchangeRepo)
+    val exchangeRepo = remember {
+        DefaultExchangeRateRepository(
+            remote = RemoteExchangeRateDataSource(exchangeApi),
+            local = LocalExchangeRateDataSource(context),
+            fallback = FallbackExchangeRateDataSource(context)
+        )
     }
+    val exchangeRateViewModel: ExchangeRateViewModel = viewModel(
+        factory = ExchangeRateViewModelFactory(exchangeRepo)
+    )
 
-    val arrivals by flightViewModel.arrivals.collectAsState()
-    val departures by flightViewModel.departures.collectAsState()
-    val error by flightViewModel.error.collectAsState()
-    val lastUpdated by flightViewModel.lastUpdated.collectAsState()
-    val isLoading by flightViewModel.isLoading.collectAsState()
-
-    val baseCurrency by exchangeRateViewModel.baseCurrency.collectAsState()
-    val rates by exchangeRateViewModel.exchangeRates.collectAsState()
-    val errorExchange by exchangeRateViewModel.error.collectAsState()
-    val lastUpdatedExchange by exchangeRateViewModel.lastUpdated.collectAsState()
     val amountExchange by exchangeRateViewModel.amount.collectAsState()
     val showCalculator = remember { mutableStateOf(false) }
+
 
     val screens = listOf("航班", "匯率")
     val screenIcons = listOf(
@@ -178,21 +169,9 @@ fun MainLayout() {
                     MainContentPage(
                         selectedIndex = selectedIndex,
                         innerPadding = innerPadding,
-                        arrivals = arrivals,
-                        departures = departures,
-                        error = error,
-                        lastUpdated = lastUpdated,
-                        isLoading = isLoading,
-                        onRetry = { flightViewModel.retryFetch() },
-                        baseCurrency = baseCurrency,
-                        amount = amountExchange,
-                        rates = rates,
-                        errorExchange = errorExchange,
-                        lastUpdatedExchange = lastUpdatedExchange,
-                        onBaseCurrencyChange = { exchangeRateViewModel.setBaseCurrency(it) },
-                        onAmountChange = { exchangeRateViewModel.changeAmount(it) },
                         onCalculateClicked = { showCalculator.value = true },
-                        onTargetCurrencyClick = { exchangeRateViewModel.setBaseCurrency(it) }
+                        flightViewModel = flightViewModel,
+                        exchangeRateViewModel = exchangeRateViewModel
                     )
                 }
             }
@@ -244,21 +223,9 @@ fun MainLayout() {
                 MainContentPage(
                     selectedIndex = selectedIndex,
                     innerPadding = paddingValues,
-                    arrivals = arrivals,
-                    departures = departures,
-                    error = error,
-                    lastUpdated = lastUpdated,
-                    isLoading = isLoading,
-                    onRetry = { flightViewModel.retryFetch() },
-                    baseCurrency = baseCurrency,
-                    amount = amountExchange,
-                    rates = rates,
-                    errorExchange = errorExchange,
-                    lastUpdatedExchange = lastUpdatedExchange,
-                    onBaseCurrencyChange = { exchangeRateViewModel.setBaseCurrency(it) },
-                    onAmountChange = { exchangeRateViewModel.changeAmount(it) },
                     onCalculateClicked = { showCalculator.value = true },
-                    onTargetCurrencyClick = { exchangeRateViewModel.setBaseCurrency(it) }
+                    flightViewModel = flightViewModel,
+                    exchangeRateViewModel = exchangeRateViewModel
                 )
             }
             if (showCalculator.value) {
@@ -276,45 +243,61 @@ fun MainLayout() {
 fun MainContentPage(
     selectedIndex: Int,
     innerPadding: PaddingValues,
-    // Flight
-    arrivals: List<FlightInfo>,
-    departures: List<FlightInfo>,
-    error: String?,
-    lastUpdated: LocalDateTime?,
-    isLoading: Boolean,
-    onRetry: () -> Unit,
-    // Exchange
-    baseCurrency: String,
-    amount: String,
-    rates: Map<String, Double>,
-    errorExchange: String?,
-    lastUpdatedExchange: LocalDateTime?,
-    onBaseCurrencyChange: (String) -> Unit,
-    onAmountChange: (String) -> Unit,
-    onCalculateClicked: () -> Unit,
-    onTargetCurrencyClick: (String) -> Unit
+    flightViewModel: FlightViewModel,
+    exchangeRateViewModel: ExchangeRateViewModel,
+    onCalculateClicked: () -> Unit
 ) {
-    when (selectedIndex) {
-        0 -> FlightPage(
-            arrivals = arrivals,
-            departures = departures,
-            error = error,
-            lastUpdated = lastUpdated,
-            isLoading = isLoading,
-            onRetry = onRetry
-        )
+    val arrivals by flightViewModel.arrivals.collectAsState()
+    val departures by flightViewModel.departures.collectAsState()
+    val message by flightViewModel.message.collectAsState()
+    val lastUpdated by flightViewModel.lastUpdated.collectAsState()
+    val isLoading by flightViewModel.isLoading.collectAsState()
 
-        1 -> ExchangeRatePage(
-            paddings = innerPadding,
-            baseCurrency = baseCurrency,
-            amount = amount,
-            rates = rates,
-            error = errorExchange,
-            lastUpdated = lastUpdatedExchange,
-            onBaseCurrencyChange = onBaseCurrencyChange,
-            onAmountChange = onAmountChange,
-            onCalculateClicked = onCalculateClicked,
-            onTargetCurrencyClick = onTargetCurrencyClick
-        )
+    val baseCurrency by exchangeRateViewModel.baseCurrency.collectAsState()
+    val amount by exchangeRateViewModel.amount.collectAsState()
+    val rates by exchangeRateViewModel.exchangeRates.collectAsState()
+    val messageExchange by exchangeRateViewModel.message.collectAsState()
+    val isLoadingExchange by exchangeRateViewModel.isLoading.collectAsState()
+    val lastUpdatedExchange by exchangeRateViewModel.lastUpdated.collectAsState()
+
+    when (selectedIndex) {
+        0 -> {
+            PageLifecycleEffect(
+                selectedIndex = selectedIndex,
+                pageIndex = 0,
+                onStart = { flightViewModel.startFlightAutoRefresh() },
+                onStop = { flightViewModel.stopFlightAutoRefresh() }
+            )
+            FlightPage(
+                arrivals = arrivals,
+                departures = departures,
+                message = message,
+                lastUpdated = lastUpdated,
+                isLoading = isLoading,
+                onRetry = { flightViewModel.retryFetch() },
+            )
+        }
+
+        1 -> {
+            PageLifecycleEffect(
+                selectedIndex = selectedIndex,
+                pageIndex = 1,
+                onStart = { exchangeRateViewModel.startExchangeRateAutoRefresh() },
+                onStop = { exchangeRateViewModel.stopExchangeRateAutoRefresh() }
+            )
+            ExchangeRatePage(
+                paddings = innerPadding,
+                baseCurrency = baseCurrency,
+                amount = amount,
+                rates = rates,
+                isLoading = isLoadingExchange,
+                message = messageExchange,
+                lastUpdated = lastUpdatedExchange,
+                onBaseCurrencyChange = { exchangeRateViewModel.setBaseCurrency(it) },
+                onAmountChange = { exchangeRateViewModel.changeAmount(it) },
+                onCalculateClicked = onCalculateClicked,
+                onTargetCurrencyClick = { exchangeRateViewModel.setBaseCurrency(it) }
+            )
+        }
     }
 }

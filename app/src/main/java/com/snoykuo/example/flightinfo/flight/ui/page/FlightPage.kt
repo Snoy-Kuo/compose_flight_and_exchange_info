@@ -1,11 +1,8 @@
 package com.snoykuo.example.flightinfo.flight.ui.page
 
 import android.content.res.Configuration
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.FlightLand
 import androidx.compose.material.icons.filled.FlightTakeoff
-import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -38,10 +35,9 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -59,20 +55,20 @@ import org.threeten.bp.format.DateTimeFormatter
 fun FlightPage(
     arrivals: List<FlightInfo>,
     departures: List<FlightInfo>,
-    error: String? = null,
+    message: String? = null,
     lastUpdated: LocalDateTime? = null,
     isLoading: Boolean = false,
     onRetry: () -> Unit
 ) {
-    val rotation by rememberInfiniteTransition().animateFloat(
-        initialValue = 0f,
-        targetValue = 360f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(1000, easing = LinearEasing)
-        )
-    )
     val isLandscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
-    val topBarHeight = if (isLandscape) 50.dp else 70.dp // 自訂高度
+    val topBarHeight = if (isLandscape) 50.dp else 80.dp // 自訂高度
+
+    val pagerState = rememberPagerState(initialPage = 0) { 2 }
+    val isCurrentPageLoading = isLoading && when (pagerState.currentPage) {
+        0 -> arrivals.isEmpty()
+        1 -> departures.isEmpty()
+        else -> false
+    }
 
     Scaffold(
         topBar = {
@@ -98,18 +94,11 @@ fun FlightPage(
                         onClick = onRetry,
                         enabled = !isLoading
                     ) {
-                        if (isLoading) {
-                            Icon(
-                                Icons.Default.Refresh,
-                                contentDescription = "Loading",
-                                modifier = Modifier.rotate(rotation),
-                                tint = MaterialTheme.colorScheme.onBackground
-                            )
-                        } else {
-                            Icon(
-                                Icons.Default.Refresh, contentDescription = "Retry",
-                                tint = MaterialTheme.colorScheme.onBackground
-                            )
+                        IconButton(
+                            onClick = onRetry,
+                            enabled = !isLoading
+                        ) {
+                            RotatingRefreshIcon(isLoading = isLoading)
                         }
                     }
                 }
@@ -119,7 +108,7 @@ fun FlightPage(
             val formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
             val formattedTime = lastUpdated?.format(formatter) ?: "--"
             Text(
-                text = "${if (error == null) "" else "$error;\t"} 資料更新時間：$formattedTime",
+                text = "${if (message == null) "" else "$message;\t"} 資料更新時間：$formattedTime",
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp),
@@ -129,21 +118,36 @@ fun FlightPage(
             )
         }
     ) { paddingValues ->
-        ResponsiveTabPager(
-            tabTitles = listOf("抵達", "起飛"),
-            arrivals = arrivals,
-            departures = departures,
+        Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(
-                    top = topBarHeight,
-                    start = paddingValues.calculateLeftPadding(
-                        LayoutDirection.Ltr
-                    ),
-                    end = paddingValues.calculateRightPadding(LayoutDirection.Ltr),
-                    bottom = paddingValues.calculateBottomPadding()
-                )
-        )
+        ) {
+            ResponsiveTabPager(
+                tabTitles = listOf("抵達", "起飛"),
+                arrivals = arrivals,
+                departures = departures,
+                pagerState = pagerState,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(
+                        top = topBarHeight,
+                        start = paddingValues.calculateLeftPadding(LayoutDirection.Ltr),
+                        end = paddingValues.calculateRightPadding(LayoutDirection.Ltr),
+                        bottom = paddingValues.calculateBottomPadding()
+                    )
+            )
+
+            if (isCurrentPageLoading) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.6f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+            }
+        }
     }
 }
 
@@ -153,7 +157,7 @@ fun ResponsiveTabPager(
     tabTitles: List<String>,
     arrivals: List<FlightInfo>,
     departures: List<FlightInfo>,
-    pagerState: PagerState = rememberPagerState { 2 }
+    pagerState: PagerState
 ) {
     val scope = rememberCoroutineScope()
     val isWideScreen = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
@@ -289,7 +293,7 @@ fun FlightPagePreview() {
         FlightPage(
             arrivals = arrivals,
             departures = departures,
-            error = null,
+            message = null,
             lastUpdated = null,
             isLoading = false,
             onRetry = {}

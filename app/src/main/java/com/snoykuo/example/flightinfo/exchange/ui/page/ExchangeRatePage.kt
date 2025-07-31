@@ -19,6 +19,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Calculate
 import androidx.compose.material.icons.filled.CurrencyExchange
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -53,159 +54,171 @@ fun ExchangeRatePage(
     baseCurrency: String = "USD",
     amount: String = "1",
     rates: Map<String, Double> = emptyMap(),
-    error: String? = null,
+    isLoading: Boolean = false,
+    message: String? = null,
     lastUpdated: LocalDateTime? = null,
     onBaseCurrencyChange: (String) -> Unit = {},
     onAmountChange: (String) -> Unit = {},
     onCalculateClicked: () -> Unit = {},
-    onTargetCurrencyClick: (String) -> Unit = { _ -> }//(currency)
+    onTargetCurrencyClick: (String) -> Unit = { _ -> }
 ) {
     val currencyList = listOf("USD", "JPY", "KRW", "CNY", "HKD", "EUR")
     val formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
     val formattedTime = lastUpdated?.format(formatter) ?: "--"
     val scrollState = rememberScrollState()
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(scrollState)
-            .padding(paddings)
-            .padding(horizontal = 16.dp)
-    ) {
+    val isInitialLoading = isLoading && rates.isEmpty()
 
-        Row {
-            Icon(
-                imageVector = Icons.Default.CurrencyExchange,
-                contentDescription = null,
-                modifier = Modifier
-                    .height(30.dp)
-                    .padding(horizontal = 5.dp)
-            )
-            Text(text = "匯率換算", style = MaterialTheme.typography.titleLarge)
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically
+    Box(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState)
+                .padding(paddings)
+                .padding(horizontal = 16.dp)
         ) {
-            OutlinedTextField(
-                value = amount,
-                onValueChange = {
-                    // 限制最大長度（避免溢位）
-                    if (it.length <= 10) onAmountChange(it)
-                },
-                label = { Text("金額") },
-                modifier = Modifier.weight(1f),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-            )
 
-            Spacer(modifier = Modifier.width(8.dp))
+            Row {
+                Icon(
+                    imageVector = Icons.Default.CurrencyExchange,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .height(30.dp)
+                        .padding(horizontal = 5.dp)
+                )
+                Text(text = "匯率換算", style = MaterialTheme.typography.titleLarge)
+            }
 
-            // 幣別下拉選單
-            var expanded by remember { mutableStateOf(false) }
+            Spacer(modifier = Modifier.height(8.dp))
+            HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+            Spacer(modifier = Modifier.height(12.dp))
 
-            Box {
-                OutlinedButton(onClick = { expanded = true }) {
-                    Text(baseCurrency)
-                    Icon(Icons.Default.ArrowDropDown, contentDescription = "Change base currency")
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                OutlinedTextField(
+                    value = amount,
+                    onValueChange = {
+                        if (it.length <= 10) onAmountChange(it)
+                    },
+                    label = { Text("金額") },
+                    modifier = Modifier.weight(1f),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+                )
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                var expanded by remember { mutableStateOf(false) }
+
+                Box {
+                    OutlinedButton(onClick = { expanded = true }) {
+                        Text(baseCurrency)
+                        Icon(
+                            Icons.Default.ArrowDropDown,
+                            contentDescription = "Change base currency"
+                        )
+                    }
+                    DropdownMenu(
+                        expanded = expanded,
+                        onDismissRequest = { expanded = false },
+                        modifier = Modifier.background(MaterialTheme.colorScheme.surface)
+                    ) {
+                        currencyList.forEach { currency ->
+                            DropdownMenuItem(
+                                text = {
+                                    Text(
+                                        text = currency,
+                                        color = MaterialTheme.colorScheme.onSurface
+                                    )
+                                },
+                                onClick = {
+                                    onBaseCurrencyChange(currency)
+                                    expanded = false
+                                },
+                                modifier = Modifier.background(MaterialTheme.colorScheme.surface)
+                            )
+                        }
+                    }
                 }
-                DropdownMenu(
-                    expanded = expanded,
-                    onDismissRequest = { expanded = false },
-                    modifier = Modifier.background(MaterialTheme.colorScheme.surface)
-                ) {
-                    currencyList.forEach { currency ->
-                        DropdownMenuItem(
-                            text = {
-                                Text(
-                                    text = currency,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-                            },
-                            onClick = {
-                                onBaseCurrencyChange(currency)
-                                expanded = false
-                            },
-                            modifier = Modifier.background(MaterialTheme.colorScheme.surface)
+
+                Spacer(modifier = Modifier.width(8.dp))
+
+                IconButton(onClick = onCalculateClicked) {
+                    Icon(
+                        Icons.Default.Calculate,
+                        contentDescription = "Calculator",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            val baseAmount = amount.toDoubleOrNull() ?: 1.0
+            val formatterNumber = NumberFormat.getNumberInstance(Locale.US).apply {
+                minimumFractionDigits = 4
+                maximumFractionDigits = 4
+            }
+
+            currencyList.forEach { currency ->
+                if (currency != baseCurrency) {
+                    val rate = rates[currency]
+                    val converted = rate?.times(baseAmount)
+                    val displayValue = converted?.let { formatterNumber.format(it) } ?: "N/A"
+
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onTargetCurrencyClick(currency) }
+                            .padding(vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "=",
+                            modifier = Modifier.weight(1f),
+                            textAlign = TextAlign.Start
+                        )
+                        Box(
+                            modifier = Modifier.weight(2.5f),
+                            contentAlignment = Alignment.CenterEnd
+                        ) {
+                            Text(text = displayValue)
+                        }
+                        Text(
+                            text = currency,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.width(60.dp),
+                            textAlign = TextAlign.End
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
+            HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
+            Spacer(modifier = Modifier.height(8.dp))
 
-            IconButton(onClick = onCalculateClicked) {
-                Icon(
-                    Icons.Default.Calculate,
-                    contentDescription = "Calculator",
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.fillMaxSize()
-                )
+            Text(
+                text = "${if (message == null) "" else "$message;\t"} 資料更新時間：$formattedTime",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+        }
+
+        if (isInitialLoading) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.6f))
+                    .clickable(enabled = false) {},
+                contentAlignment = Alignment.Center
+            ) {
+                CircularProgressIndicator()
             }
         }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        val baseAmount = amount.toDoubleOrNull() ?: 1.0
-
-        // 顯示兌換匯率
-        val formatter = NumberFormat.getNumberInstance(Locale.US).apply {
-            minimumFractionDigits = 4
-            maximumFractionDigits = 4
-        }
-        currencyList.forEach { currency ->
-            if (currency != baseCurrency) {
-                val rate = rates[currency]
-                val converted = if (rate != null) rate * baseAmount else null
-                val displayValue = converted?.let { formatter.format(it) } ?: "N/A"
-
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onTargetCurrencyClick(currency) }
-                        .padding(vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "=",
-                        modifier = Modifier.weight(1f),
-                        textAlign = TextAlign.Start
-                    )
-                    Box(
-                        modifier = Modifier.weight(2.5f),
-                        contentAlignment = Alignment.CenterEnd
-                    ) {
-                        Text(text = displayValue)
-                    }
-                    Text(
-                        text = currency,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.width(60.dp),
-                        textAlign = TextAlign.End
-                    )
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Text(
-            text = "${if (error == null) "" else "$error;\t"} 資料更新時間：$formattedTime",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
     }
 }
+
 
 @Preview(showBackground = true, name = "ExchangeRatePage Preview")
 @Composable

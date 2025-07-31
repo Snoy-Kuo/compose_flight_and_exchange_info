@@ -32,10 +32,11 @@ This is a Jetpack Compose-based app that displays flight and exchange rate infor
  - [okhttp](https://github.com/square/okhttp)
 
 ## Todos
-- [ ] Add loading indicator
+- [x] Add loading indicator
 - [ ] Add unit tests
 - [ ] Improve BottomSheet UI
 - [ ] Integrate official API access token and renewal mechanism
 - [ ] Refactor `RemoteDataSource` to wrap responses in `Response` for HTTP code handling
 - [ ] Beautify flight info cards
 - [ ] Remove unused `CsvDataSource`
+- [x] Reduce unnecessary API calls
