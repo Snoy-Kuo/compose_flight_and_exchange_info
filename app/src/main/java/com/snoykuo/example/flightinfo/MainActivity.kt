@@ -2,8 +2,6 @@ package com.snoykuo.example.flightinfo
 
 import android.app.Activity
 import android.content.res.Configuration
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,13 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.graphics.toArgb
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.snoykuo.example.flightinfo.common.ui.layout.MainLayout
 import com.snoykuo.example.flightinfo.common.ui.theme.FlightInfoTheme
-import androidx.core.graphics.drawable.toDrawable
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
