@@ -3,8 +3,6 @@ package com.snoykuo.example.flightinfo.exchange.repo
 import com.snoykuo.example.flightinfo.common.data.DataResult
 import com.snoykuo.example.flightinfo.exchange.datasource.ExchangeRateDataSource
 import com.snoykuo.example.flightinfo.exchange.datasource.MutableExchangeRateDataSource
-import retrofit2.HttpException
-import java.io.IOException
 
 class DefaultExchangeRateRepository(
     private val remote: ExchangeRateDataSource,
@@ -21,10 +19,6 @@ class DefaultExchangeRateRepository(
             val rates = remote.getRates(baseCurrency, currencies)
             local.saveRates(rates, remote.getLastUpdated())
             return DataResult.Success(rates)
-        } catch (e: HttpException) {
-            Exception("HTTP ${e.code()}: ${e.message()}", e)
-        } catch (e: IOException) {
-            Exception("Network error: ${e.message}", e)
         } catch (e: Exception) {
             e
         }

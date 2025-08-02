@@ -17,16 +17,12 @@ class DefaultFlightRepository(
     override suspend fun getFlights(): DataResult<List<FlightInfo>> {
 
         // 1. 先嘗試 remote
-        airportRepo?.refreshAirports()
         val remoteError = try {
+            airportRepo?.refreshAirports()
             val flights = remote.getFlights()
             local.saveAll(flights)
             val enriched = enrichFlights(flights)
             return DataResult.Success(enriched)
-        } catch (e: HttpException) {
-            Exception("HTTP ${e.code()}: ${e.message()}", e)
-        } catch (e: IOException) {
-            Exception("Network error: ${e.message}", e)
         } catch (e: Exception) {
             e
         }

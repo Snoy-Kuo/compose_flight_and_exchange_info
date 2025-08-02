@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FlightInfo</string>
+    <string name="loading">載入中...</string>
+    <string name="error_loading_failed">資料讀取失敗</string>
+    <string name="error_not_found">找不到資料</string>
+    <string name="error_rate_limit">額度用完囉</string>
+    <string name="error_server">伺服器發生錯誤</string>
+    <string name="error_network_connection">網路連線不穩定</string>
+    <string name="error_parsing">資料解析失敗</string>
+    <string name="error_unknown">發生未知錯誤</string>
+    <string name="error_network_with_code">網路問題 (Code: %1$d)</string>
 </resources>

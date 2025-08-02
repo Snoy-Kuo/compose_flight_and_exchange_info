@@ -1,9 +1,13 @@
 package com.snoykuo.example.flightinfo.exchange.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.snoykuo.example.flightinfo.R
 import com.snoykuo.example.flightinfo.common.data.DataResult
+import com.snoykuo.example.flightinfo.common.util.UiText
+import com.snoykuo.example.flightinfo.common.util.getErrorMessage
 import com.snoykuo.example.flightinfo.common.util.millisToLocalDateTime
 import com.snoykuo.example.flightinfo.exchange.repo.ExchangeRateRepository
 import kotlinx.coroutines.Dispatchers
@@ -32,8 +36,8 @@ class ExchangeRateViewModel(
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
 
-    private val _message = MutableStateFlow<String?>(null)
-    val message: StateFlow<String?> = _message
+    private val _message = MutableStateFlow<UiText?>(null)
+    val message: StateFlow<UiText?> = _message
 
     private val isEditing = MutableStateFlow(false)
 
@@ -82,16 +86,25 @@ class ExchangeRateViewModel(
 
     private suspend fun fetchRates() {
         _isLoading.value = true
-        _message.value = "載入中..."
+        _message.value = UiText.StringResource(R.string.loading)
 
-        val result = withContext(Dispatchers.IO) {
-            repository.getRates(
-                _baseCurrency.value,
-                listOf("HKD", "USD", "JPY", "CNY", "KRW", "EUR")
-            )
+        try {
+            val result = withContext(Dispatchers.IO) {
+                repository.getRates(_baseCurrency.value, TARGET_CURRENCIES)
+            }
+
+            processResult(result)
+
+        } catch (e: Exception) {
+            Log.e("ExchangeRateViewModel", "An unexpected error occurred", e)
+            _message.value = UiText.StringResource(R.string.error_unknown)
+            _exchangeRates.value = emptyMap()
+        } finally {
+            _isLoading.value = false
         }
-        _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
+    }
 
+    private suspend fun processResult(result: DataResult<Map<String, Double>>) {
         when (result) {
             is DataResult.Success -> {
                 _exchangeRates.value = result.data
@@ -99,17 +112,20 @@ class ExchangeRateViewModel(
             }
 
             is DataResult.Error -> {
-                result.backupData?.let {
-                    _exchangeRates.value = it
-                    _message.value = "網路問題"
-                } ?: run {
-                    _exchangeRates.value = emptyMap()
-                    _message.value = "資料讀取失敗"
+                _exchangeRates.value = result.backupData ?: emptyMap()
+
+                _message.value = if (result.backupData == null) {
+                    UiText.StringResource(R.string.error_loading_failed)
+                } else {
+                    getErrorMessage(result.error)
                 }
             }
         }
+        _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
+    }
 
-        _isLoading.value = false
+    companion object {
+        private val TARGET_CURRENCIES = listOf("HKD", "USD", "JPY", "CNY", "KRW", "EUR")
     }
 }
 

@@ -4,7 +4,10 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.snoykuo.example.flightinfo.R
 import com.snoykuo.example.flightinfo.common.data.DataResult
+import com.snoykuo.example.flightinfo.common.util.UiText
+import com.snoykuo.example.flightinfo.common.util.getErrorMessage
 import com.snoykuo.example.flightinfo.common.util.millisToLocalDateTime
 import com.snoykuo.example.flightinfo.flight.data.FlightInfo
 import com.snoykuo.example.flightinfo.flight.repo.FlightRepository
@@ -26,8 +29,8 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
     private val _departures = MutableStateFlow<List<FlightInfo>>(emptyList())
     val departures: StateFlow<List<FlightInfo>> = _departures
 
-    private val _message = MutableStateFlow<String?>(null)
-    val message: StateFlow<String?> = _message
+    private val _message = MutableStateFlow<UiText?>(null)
+    val message: StateFlow<UiText?> = _message
 
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
@@ -55,40 +58,50 @@ class FlightViewModel(private val repository: FlightRepository) : ViewModel() {
 
     private suspend fun fetchFlightData() {
         _isLoading.value = true
-        _message.value = "載入中..."
+        _message.value = UiText.StringResource(R.string.loading)
         val startTime = System.currentTimeMillis()
+
         try {
             val result = withContext(Dispatchers.IO) {
                 repository.getFlights()
             }
-            Log.d("RDTest", "result=$result")
-            _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
-            when (result) {
-                is DataResult.Success -> {
-                    updateFlights(result.data)
-                    _message.value = null
-                }
-
-                is DataResult.Error -> {
-                    result.backupData?.let {
-                        updateFlights(it)
-                        Log.w("RDTest", " 網路問題${result.error}")
-                        _message.value = "網路問題"
-                    } ?: run {
-                        Log.w("RDTest", "資料讀取失敗${result.error}")
-                        _message.value = "資料讀取失敗"
-                        _arrivals.value = emptyList()
-                        _departures.value = emptyList()
-                    }
-                }
-            }
+            processResult(result)
+        } catch (e: Exception) {
+            Log.e("FlightViewModel", "An unexpected error occurred", e)
+            _message.value = UiText.StringResource(R.string.error_unknown)
+            _arrivals.value = emptyList()
+            _departures.value = emptyList()
         } finally {
-            _isLoading.value = false
             val elapsed = System.currentTimeMillis() - startTime
             val remaining = 1000L - elapsed
-            if (remaining > 0) delay(remaining)
+            if (remaining > 0) {
+                delay(remaining)
+            }
             _isLoading.value = false
         }
+    }
+
+    private suspend fun processResult(result: DataResult<List<FlightInfo>>) {
+        when (result) {
+            is DataResult.Success -> {
+                updateFlights(result.data)
+                _message.value = null
+            }
+
+            is DataResult.Error -> {
+                result.backupData?.let { updateFlights(it) } ?: run {
+                    _arrivals.value = emptyList()
+                    _departures.value = emptyList()
+                }
+
+                _message.value = if (result.backupData == null) {
+                    UiText.StringResource(R.string.error_loading_failed)
+                } else {
+                    getErrorMessage(result.error)
+                }
+            }
+        }
+        _lastUpdated.value = millisToLocalDateTime(repository.getLastUpdated())
     }
 
     private fun updateFlights(flights: List<FlightInfo>) {

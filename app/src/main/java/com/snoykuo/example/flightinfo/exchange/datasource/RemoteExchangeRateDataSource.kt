@@ -1,7 +1,7 @@
 package com.snoykuo.example.flightinfo.exchange.datasource
 
 class RemoteExchangeRateDataSource(
-    private val apiService: FreeCurrencyApiService, // Retrofit Service
+    private val apiService: FreeCurrencyApiService,
 ) : ExchangeRateDataSource {
 
     private var lastUpdated: Long = 0L

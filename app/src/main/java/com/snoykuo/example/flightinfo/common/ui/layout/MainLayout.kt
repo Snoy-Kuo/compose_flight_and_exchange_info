@@ -271,7 +271,7 @@ fun MainContentPage(
             FlightPage(
                 arrivals = arrivals,
                 departures = departures,
-                message = message,
+                message = message?.asString(context = LocalContext.current),
                 lastUpdated = lastUpdated,
                 isLoading = isLoading,
                 onRetry = { flightViewModel.retryFetch() },
@@ -291,7 +291,7 @@ fun MainContentPage(
                 amount = amount,
                 rates = rates,
                 isLoading = isLoadingExchange,
-                message = messageExchange,
+                message = messageExchange?.asString(context = LocalContext.current),
                 lastUpdated = lastUpdatedExchange,
                 onBaseCurrencyChange = { exchangeRateViewModel.setBaseCurrency(it) },
                 onAmountChange = { exchangeRateViewModel.changeAmount(it) },
