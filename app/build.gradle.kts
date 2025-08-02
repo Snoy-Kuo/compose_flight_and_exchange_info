@@ -56,6 +56,15 @@ android {
         compose = true
         buildConfig = true
     }
+
+    testOptions {
+        unitTests.all {
+            it.reports.apply {
+                html.outputLocation.set(layout.projectDirectory.dir("test-reports/${name}/html"))
+                junitXml.outputLocation.set(layout.projectDirectory.dir("test-reports/${name}/xml"))
+            }
+        }
+    }
 }
 
 dependencies {
@@ -81,6 +90,10 @@ dependencies {
     implementation(libs.material.icons.extended)
 
     testImplementation(libs.junit)
+    // ThreeTenBP（非 Android 用的 backport）
+    testImplementation(libs.threeten.threetenbp)
+    // 加上 tzdb 提供者
+    testRuntimeOnly(libs.threeten.threetenbp)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
