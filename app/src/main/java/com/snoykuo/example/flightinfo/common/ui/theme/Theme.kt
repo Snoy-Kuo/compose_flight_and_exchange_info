@@ -13,28 +13,44 @@ import androidx.compose.ui.platform.LocalContext
 
 // 明亮模式
 val LightColors = lightColorScheme(
-    primary = Color(0xFFA2820B),      // gold 黃
-    onPrimary = Color(0xFF000000),    // 黑字
-    secondary = Color(0xFF616161),    // 淺灰做區塊底
+    primary = Color(0xFFA2820B),         // 金黃
+    onPrimary = Color(0xFFF5F5F5),       // 柔和白字
+    secondary = Color(0xFF616161),
     onSecondary = Color.White,
-    background = Color(0xFFFFFBF3),   // 柔和奶白底
-    onBackground = Color(0xFF212121), // 深灰字
+    secondaryContainer = Color(0xFFE0E0E0), // 比 secondary 更淺一點
+    onSecondaryContainer = Color(0xFF212121),
+
+    tertiary = Color(0xFF424242),
+    onTertiary = Color.White,
+    tertiaryContainer = Color(0xFFBDBDBD),
+    onTertiaryContainer = Color.Black,
+
+    background = Color(0xFFFFFBF3),
+    onBackground = Color(0xFF212121),
     surface = Color.White,
     onSurface = Color.Black,
-    onSurfaceVariant = Color(0xFF777777), // 淺灰
+    onSurfaceVariant = Color(0xFF777777),
 )
 
 // 暗黑模式
 val DarkColors = darkColorScheme(
     primary = Color(0xFFFFDC7C),
     onPrimary = Color(0xFF000000),
-    secondary = Color(0xFFB0BEC5),    // 淡灰藍
+    secondary = Color(0xFFB0BEC5),
     onSecondary = Color.Black,
-    background = Color(0xFF1E1E1E),   // 深灰黑
+    secondaryContainer = Color(0xFF37474F), // 深灰藍容器
+    onSecondaryContainer = Color(0xFFECEFF1),
+
+    tertiary = Color(0xFFBDBDBD),
+    onTertiary = Color(0xFF212121),
+    tertiaryContainer = Color(0xFF424242),
+    onTertiaryContainer = Color.White,
+
+    background = Color(0xFF1E1E1E),
     onBackground = Color(0xFFE0E0E0),
     surface = Color(0xFF2C2C2C),
     onSurface = Color.White,
-    onSurfaceVariant = Color(0xFFAAAAAA), // 淺灰
+    onSurfaceVariant = Color(0xFFAAAAAA),
 )
 
 @Composable

@@ -97,7 +97,7 @@ fun ExchangeRatePage(
                 OutlinedTextField(
                     value = amount,
                     onValueChange = {
-                        if (it.length <= 10) onAmountChange(it)
+                        onAmountChange(it)
                     },
                     label = { Text("金額") },
                     modifier = Modifier.weight(1f),

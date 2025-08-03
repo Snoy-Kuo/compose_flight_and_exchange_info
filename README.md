@@ -34,7 +34,7 @@ This is a Jetpack Compose-based app that displays flight and exchange rate infor
 ## Todos
 - [x] Add loading indicator
 - [x] Add unit tests
-- [ ] Improve BottomSheet UI
+- [x] Improve BottomSheet UI
 - [ ] Integrate official API access token and renewal mechanism
 - [x] ~~Refactor `RemoteDataSource` to wrap responses in `Response` for HTTP code handling~~
     - HTTP code handling has been moved to ViewModel as per the architecture.
