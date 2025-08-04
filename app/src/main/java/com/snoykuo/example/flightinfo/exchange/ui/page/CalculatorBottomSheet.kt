@@ -58,7 +58,7 @@ private val scientificFormatter: NumberFormat =
 private const val SCIENTIFIC_NOTATION_THRESHOLD = 1e16
 
 // A sealed class to represent the result of a calculation, enabling specific error handling.
-private sealed class CalculationResult {
+internal sealed class CalculationResult {
     data class Success(val value: Double) : CalculationResult()
     data object DivisionByZeroError : CalculationResult()
     data object OverflowError : CalculationResult() // For Infinity, -Infinity
@@ -70,7 +70,7 @@ private sealed class CalculationResult {
  * It expects clean, unformatted numbers.
  * Returns a [CalculationResult] to distinguish between success and specific errors.
  */
-private fun calculate(a: String, b: String, op: Char): CalculationResult {
+internal fun calculate(a: String, b: String, op: Char): CalculationResult {
     val num1 = a.toDoubleOrNull()
     val num2 = b.toDoubleOrNull()
 
@@ -96,7 +96,7 @@ private fun calculate(a: String, b: String, op: Char): CalculationResult {
  * Formats a final calculation result.
  * It intelligently chooses between standard and scientific notation based on the number's magnitude.
  */
-private fun formatResult(value: Double): String {
+internal fun formatResult(value: Double): String {
     // Explicitly choose the formatter based on the number's magnitude.
     return if (abs(value) >= SCIENTIFIC_NOTATION_THRESHOLD && value.isFinite()) {
         scientificFormatter.format(value)
@@ -109,7 +109,7 @@ private fun formatResult(value: Double): String {
  * Formats a raw number string for real-time display, adding thousand separators.
  * Example: "12345.67" -> "12,345.67"
  */
-private fun formatForDisplay(number: String): String {
+internal fun formatForDisplay(number: String): String {
     if (number.isEmpty()) return "0"
     if (number.contains('E', ignoreCase = true)) return number // Don't format scientific notation
 
@@ -140,12 +140,11 @@ private fun formatForDisplay(number: String): String {
 /**
  * Removes a trailing dot from a string, if it exists.
  */
-private fun stripTrailingDot(input: String): String {
+internal fun stripTrailingDot(input: String): String {
     return input.removeSuffix(".")
 }
 
 private const val MAX_INPUT_DIGITS = 17
-//private const val DISMISS_LABEL = "▼"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -196,7 +195,7 @@ fun CalculatorBottomSheet(
             operator = null
             secondNumber = ""
             error = null
-            if (label !in "0".."9") return
+            if (label !in "0".."9" && label != "00") return
         }
 
         when (label) {
@@ -216,6 +215,20 @@ fun CalculatorBottomSheet(
                         secondNumber = label
                     } else {
                         secondNumber += label
+                    }
+                }
+            }
+
+            "00" -> {
+                if (operator == null) {
+                    if (firstNumber.length >= MAX_INPUT_DIGITS - 1) return
+                    if (firstNumber != "0") {
+                        firstNumber += "00"
+                    }
+                } else {
+                    if (secondNumber.length >= MAX_INPUT_DIGITS - 1) return
+                    if (secondNumber != "0") {
+                        secondNumber += "00"
                     }
                 }
             }
@@ -318,10 +331,6 @@ fun CalculatorBottomSheet(
                     onDismiss()
                 }
             }
-
-//            DISMISS_LABEL -> {
-//                onDismiss()
-//            }
         }
     }
 
@@ -402,14 +411,14 @@ internal fun CalculatorSheetContent(
                 listOf("7", "8", "9", "÷"),
                 listOf("4", "5", "6", "×"),
                 listOf("1", "2", "3", "-"),
-                listOf("0", ".", "C", "+"),
-                listOf("=", strDone)//, DISMISS_LABEL)
+                listOf("0", "00", ".", "+"),
+                listOf("C", "=", strDone)
             )
             val buttonsLandscape = listOf(
-                listOf("7", "8", "9", "÷", "×"),
-                listOf("4", "5", "6", "-", "+"),
-                listOf("1", "2", "3", ".", "C"),
-                listOf("0", "=", strDone)//, DISMISS_LABEL)
+                listOf("7", "8", "9", "÷", "C"),
+                listOf("4", "5", "6", "×", "+"),
+                listOf("1", "2", "3", "-", "="),
+                listOf("0", "00", ".", strDone)
             )
             val buttons = if (isLandscape) buttonsLandscape else buttonsPortrait
 
@@ -421,8 +430,11 @@ internal fun CalculatorSheetContent(
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     row.forEach { label ->
+                        val isDoneButton = label == strDone
+                        val buttonWeight = if (isDoneButton && isLandscape) 2f else 1f
+
                         val containerColor = when (label) {
-                            in "0".."9", "." -> MaterialTheme.colorScheme.secondaryContainer
+                            in "0".."9", ".", "00" -> MaterialTheme.colorScheme.secondaryContainer
                             in listOf(
                                 "+",
                                 "-",
@@ -436,7 +448,7 @@ internal fun CalculatorSheetContent(
                             else -> MaterialTheme.colorScheme.primary // Fallback
                         }
                         val textColor = when (label) {
-                            in "0".."9", "." -> MaterialTheme.colorScheme.onSecondaryContainer
+                            in "0".."9", ".", "00" -> MaterialTheme.colorScheme.onSecondaryContainer
                             in listOf(
                                 "+",
                                 "-",
@@ -453,7 +465,7 @@ internal fun CalculatorSheetContent(
                         Button(
                             onClick = { onButtonClick(label) },
                             modifier = Modifier
-                                .weight(1f)
+                                .weight(buttonWeight)
                                 .padding(horizontal = 4.dp)
                                 .height(48.dp),
                             colors = ButtonDefaults.buttonColors(

@@ -94,6 +94,7 @@ dependencies {
     testImplementation(libs.threeten.threetenbp)
     // 加上 tzdb 提供者
     testRuntimeOnly(libs.threeten.threetenbp)
+    testImplementation(libs.truth)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
